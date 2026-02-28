@@ -87,13 +87,13 @@ body {
 }
 
 .section-1 {
-  background-image: url("../assets/section1.jpg");
+  background-image: url("../assets/section1.webp");
 }
 .section-2 {
-  background-image: url("../assets/section2.jpg");
+  background-image: url("../assets/section2.webp");
 }
 .section-3 {
-  background-image: url("../assets/section3.jpg");
+  background-image: url("../assets/section3.webp");
 }
 /* TEXT CENTER */
 .center-text {
@@ -181,38 +181,38 @@ textarea {
 
 /* SECTION BACKGROUNDS */
 .s1 {
-  background-image: url("../assets/section1.jpg");
+  background-image: url("../assets/section1.webp");
 }
 .s2 {
-  background-image: url("../assets/section2.jpg");
+  background-image: url("../assets/section2.webp");
   color: #fffbea;
 }
 .s3 {
-  background-image: url("../assets/section3.jpg");
+  background-image: url("../assets/section3.webp");
 }
 .s32 {
-  background-image: url("../assets/section32.jpg");
+  background-image: url("../assets/section32.webp");
 }
 .s4 {
-  background-image: url("../assets/section4.jpg");
+  background-image: url("../assets/section4.webp");
 }
 .s5 {
-  background-image: url("../assets/section5.jpg");
+  background-image: url("../assets/section5.webp");
 }
 .s6 {
-  background-image: url("../assets/section6.jpg");
+  background-image: url("../assets/section6.webp");
 }
 .s7 {
-  background-image: url("../assets/section7.jpg");
+  background-image: url("../assets/section7.webp");
 }
 .s8 {
-  background-image: url("../assets/section8.jpg");
+  background-image: url("../assets/section8.webp");
 }
 .s9 {
-  background-image: url("../assets/section9.jpg");
+  background-image: url("../assets/section9.webp");
 }
 .s10 {
-  background-image: url("../assets/section10.jpg");
+  background-image: url("../assets/section10.webp");
 }
 .typewriter {
   font-family: "Great Vibes", cursive;
