@@ -8,45 +8,100 @@
       href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Dancing+Script:wght@400;600&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="css/mobile.css" media="(max-width: 768px)" />
     <link rel="stylesheet" href="css/desktop.css" media="(min-width: 769px)" />
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+
+    <!-- INDIE FLOWER FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap"
+      rel="stylesheet"
+    />
+    <script></script>
   </head>
   <body>
+    <div id="loadingCover">
+      <div class="loading-content">
+        <!-- <h1 class="loading-couple">
+          Dinda <br />
+          <span>&</span> <br />
+          Andrico
+        </h1> -->
+
+        <div class="loading-line"></div>
+
+        <p class="loading-text">Loading Invitation</p>
+
+        <p class="loading-credit">Made with love by Dinda & Andrico</p>
+      </div>
+    </div>
     <!-- OPEN INVITATION (GLOBAL OVERLAY) -->
-    <!-- <div id="cover">
-      <img src="assets/cover.jpg" alt="Cover" class="cover-image" />
+    <div id="cover">
+      <img src="assets/cover.webp" alt="Cover" class="cover-image" />
+
       <div class="cover-overlay">
-        <h1>You’re Invited</h1>
+        <h1 class="cover-couple">
+          Dinda <br />
+          <span>&</span> <br />
+          Andrico
+        </h1>
+
+        <p class="cover-dear">Dear Mr/Mrs</p>
+
+        <h2 id="guestName" class="cover-guest">Guest</h2>
+
         <button id="openInvitation">Open Invitation</button>
       </div>
-    </div> -->
+    </div>
 
     <!-- WEBSITE CONTENT -->
     <div id="layout">
       <!-- LEFT BACKGROUND (DESKTOP/TABLET ONLY) -->
       <div id="left-bg">
         <img src="assets/cover.webp" alt="Background" />
+
+        <div class="left-overlay">
+          <h1 class="cover-couple">
+            Dinda <br />
+            <span>&</span> <br />
+            Andrico
+          </h1>
+
+          <p class="cover-dear">Dear Mr/Mrs</p>
+
+          <h2 id="guestNameLeft" class="cover-guest">Guest</h2>
+        </div>
       </div>
 
       <!-- RIGHT CONTENT -->
       <div id="main">
         <!-- SECTION 1 -->
         <section class="photo-section s1 section-1-custom">
-          <h1
+          <h2
             class="typewriter text-left-bottom"
-            data-text="we're tying the knot"
+            data-text="We're tying the knot"
           >
             <span></span>
-          </h1>
+          </h2>
           <br />
-          <h1
+          <h2
             class="typewriter text-left-bottom2"
             data-text="and you're on the"
           >
             <span></span>
-          </h1>
+          </h2>
 
-          <h1 class="typewriter text-right-bottom" data-text="guest list!">
+          <h1
+            class="typewriter text-right-bottom great-vibes"
+            data-text="Guest List!"
+          >
             <span></span>
           </h1>
         </section>
@@ -62,10 +117,10 @@
         <!-- SECTION 2 -->
         <section class="photo-section s2">
           <p class="fade-in section-2-text section-2-center-text">
-            “Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan
-            pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung
-            dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa
-            kasih dan sayang”
+            “And one of His signs is that He created for you spouses from among
+            yourselves so that you may find comfort in them. And He has placed
+            between you compassion and mercy. Surely in this are signs for
+            people who reflect.”
             <br /><br />
             <b class="section-2-surah">QS. Ar-Rum : 21</b>
           </p>
@@ -73,51 +128,50 @@
 
         <!-- SECTION 3 -->
         <section class="photo-section s3 section-3-custom">
-          <h1
-            class="typewriter bride-title"
-            data-text="The
-            "
-          >
+          <h1 class="typewriter bride-title" data-text="The">
+            <span></span>
+          </h1>
+          <h1 class="typewriter bride-title2" data-text="Bride">
+            <span></span>
+          </h1>
+          <h1 class="typewriter bride-name" data-text="Dinda Zalfa Salsabila">
             <span></span>
           </h1>
           <h1
-            class="typewriter bride-title2"
-            data-text="
-            Bride"
+            class="typewriter bride-born"
+            data-text="Surabaya, June 28th 2000"
           >
             <span></span>
           </h1>
-          <h1
-            class="typewriter bride-name"
-            data-text="
-          Dinda Zalfa Salsabila"
-          >
+          <h1 class="typewriter bride-ig" data-text="@dzalfa">
             <span></span>
           </h1>
         </section>
         <!-- SECTION 3(2) -->
         <section class="photo-section s32 section-32-custom">
-          <h1
-            class="typewriter groom-title"
-            data-text="The
-            "
-          >
+          <h1 class="typewriter groom-title" data-text="The">
             <span></span>
           </h1>
-          <h1
-            class="typewriter groom-title2"
-            data-text="
-            Groom"
-          >
+          <h1 class="typewriter groom-title2" data-text="Groom">
             <span></span>
           </h1>
           <h1
             class="typewriter groom-name"
-            data-text="
-          Andrico Mauludi Junianto"
+            data-text="Andrico Mauludi Junianto"
           >
             <span></span>
           </h1>
+          <h1
+            class="typewriter groom-born"
+            data-text="Palembang, June 21st 2000"
+          >
+            <span></span>
+          </h1>
+          <h1 class="typewriter groom-ig" data-text="@andricomauludi">
+            <span></span>
+          </h1>
+          <!-- <i class="fa-brands fa-instagram"></i> -->
+          
         </section>
 
         <!-- SECTION 4 -->
@@ -166,6 +220,155 @@
           </h1>
         </section>
 
+        <!-- OUR STORY -->
+        <section class="story-section">
+          <div class="fade-in story-box">
+            <h1>Our Story</h1>
+            <h2>How We Met</h2>
+
+            <p>
+              Our story began in the simplest way — through a mutual friend who
+              thought we might get along. At the time, neither of us expected
+              that this introduction would lead us to where we are today.
+            </p>
+
+            <p>
+              Not long after, we discovered that our offices were actually
+              located quite close to one another. What started as occasional
+              conversations slowly grew into something more meaningful.
+            </p>
+
+            <p>
+              We also found many things in common. Andrico spent his university
+              years in Surabaya, while Dinda grew up there. That shared
+              connection to the city created a familiarity between us.
+            </p>
+
+            <p>
+              In Jakarta, one of our favorite little traditions quickly formed —
+              whenever we had the chance, we would meet up to explore unique and
+              affordable culinary spots around the city. Those simple food
+              adventures turned into countless conversations, laughter, and
+              moments that slowly built the foundation of our relationship.
+            </p>
+
+            <p>
+              From a simple introduction to a journey filled with shared
+              stories, we are grateful for every step that led us here.
+            </p>
+          </div>
+        </section>
+        <!-- SECTION GALLERY -->
+        <section class="photo-section gallery-section">
+          <div class="gallery-overlay">
+            <div class="gallery-tiles">
+              <img
+                src="assets/gallery1.webp"
+                class="tile-big"
+                onclick="openModal(this.src)"
+              />
+              <img
+                src="assets/gallery7.webp"
+                class="tile-vertical"
+                onclick="openModal(this.src)"
+              />
+              <img
+                src="assets/gallery3.webp"
+                class="tile-vertical"
+                onclick="openModal(this.src)"
+              />
+              <img
+                src="assets/gallery4.webp"
+                class="tile-horizontal"
+                onclick="openModal(this.src)"
+              />
+              <img src="assets/gallery5.webp" onclick="openModal(this.src)" />
+              <img
+                src="assets/gallery6.webp"
+                class="tile-vertical"
+                onclick="openModal(this.src)"
+              />
+              <img src="assets/gallery2.webp" onclick="openModal(this.src)" />
+              <img
+                src="assets/gallery8.webp"
+                class="tile-big"
+                onclick="openModal(this.src)"
+              />
+              <img src="assets/gallery9.webp" onclick="openModal(this.src)" />
+              <img src="assets/gallery10.webp" onclick="openModal(this.src)" />
+            </div>
+          </div>
+        </section>
+        <!-- ENGAGEMENT STORY -->
+        <section class="engagement-section">
+          <div class="fade-in story-box">
+            <h1>Engagement Story</h1>
+            <h2>Our Intimate Moment</h2>
+
+            <p>
+              On February 15th, 2026, we celebrated a meaningful milestone in
+              our journey together — our engagement ceremony held at Ellenoir,
+              Surabaya.
+            </p>
+
+            <p>
+              The day was intentionally kept intimate, attended only by our
+              closest family members from both sides. It was never meant to be a
+              grand celebration, but rather a moment for the people who mean the
+              most to us.
+            </p>
+
+            <p>
+              The event itself was beautifully simple. A shared dining table
+              where families gathered, conversations flowed warmly, and a small
+              backdrop where we spoke from the heart in front of our loved ones.
+            </p>
+
+            <p>
+              Though the setting was modest, the atmosphere was filled with
+              warmth, joy, and genuine happiness. It was a reminder that the
+              most meaningful moments are often the simplest ones — surrounded
+              by family, love, and sincerity.
+            </p>
+          </div>
+        </section>
+        <!-- SECTION GALLERY 2 -->
+        <section class="photo-section gallery-section-2">
+          <div class="gallery-overlay">
+            <div class="gallery-tiles-2">
+              <img
+                src="assets/gallery11.webp"
+                class="g2-big"
+                onclick="openModal(this.src)"
+              />
+              <img src="assets/gallery12.webp" onclick="openModal(this.src)" />
+              <img
+                src="assets/gallery13.webp"
+                class="g2-vertical"
+                onclick="openModal(this.src)"
+              />
+              <img src="assets/gallery14.webp" onclick="openModal(this.src)" />
+              <img
+                src="assets/gallery15.webp"
+                class="g2-big"
+                onclick="openModal(this.src)"
+              />
+              <img src="assets/gallery16.webp" onclick="openModal(this.src)" />
+              <img
+                src="assets/gallery17.webp"
+                class="g2-vertical"
+                onclick="openModal(this.src)"
+              />
+              <img src="assets/gallery18.webp" onclick="openModal(this.src)" />
+              <img src="assets/gallery19.webp" onclick="openModal(this.src)" />
+              <img
+                src="assets/gallery20.webp"
+                class="g2-horizontal"
+                onclick="openModal(this.src)"
+              />
+            </div>
+          </div>
+        </section>
         <!-- SECTION 5 -->
         <section class="photo-section s5 section-5-custom">
           <h1
@@ -204,7 +407,6 @@
             <span></span>
           </h1>
         </section>
-
         <!-- SECTION 6 -->
         <section class="photo-section s6 section-6-custom">
           <h1 class="typewriter title-s6" data-text="At">
@@ -234,21 +436,47 @@
         <!-- SECTION 7 (FIXED BG) -->
         <section class="photo-section fixed-bg s7">
           <h1 class="typewriter" data-text="Wedding Gift"><span></span></h1>
+
           <p
             class="typewriter"
-            data-text="your presence is truly the best gift, but if you'd like to send a little something. We provide you a digital envelope to make it easier for you."
+            data-text="Your presence is truly the best gift, but if you'd like to send a little something. We provide you a digital envelope to make it easier for you."
           >
             <span></span>
           </p>
 
           <div class="gift-box">
             <div class="gift-row">
-              <span style="color: #fffbea;">BCA<br />Dinda Zalfa Salsabila<br />xxxxxxx</span>
-              <button onclick="copyText('xxxxxxx')">Copy</button>
+              <div class="gift-info">
+                <div class="bank">BCA</div>
+                <div class="name">Dinda Zalfa Salsabila</div>
+
+                <div class="rekening">
+                  <span>506 518 1336</span>
+                  <button
+                    class="copy-btn"
+                    onclick="copyText(this, '5065181336')"
+                  >
+                    <i class="fa-solid fa-copy"></i>
+                  </button>
+                </div>
+              </div>
             </div>
+
             <div class="gift-row">
-              <span style="color: #fffbea;">Mandiri<br />Andrico Mauludi Junianto<br />xxxxxxx</span>
-              <button onclick="copyText('xxxxxxx')">Copy</button>
+              <div class="gift-info">
+                <div class="bank">Mandiri</div>
+                <div class="name">Andrico Mauludi Junianto</div>
+
+                <div class="rekening">
+                  <span>133 002 795 3892</span>
+                  <button
+                    class="copy-btn"
+                    onclick="copyText(this, '1330027953892')"
+                  >
+                    <i class="fa-solid fa-copy"></i>
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -257,35 +485,91 @@
         <section class="photo-section s8">
           <h1 class="typewriter" data-text="Send Your Wish"><span></span></h1>
 
-          <div class="wish-box">
-            <input placeholder="Name" />
-            <textarea placeholder="Give your wish"></textarea>
-            <button class="btn-hover-s8">Submit</button>
+          <!-- <p class="wish-sub">
+            Your presence means the world to us. Let us know if you'll be
+            attending and leave us a message.
+          </p> -->
+          <p
+            class="typewriter"
+            data-text="Let us know if you'll be
+            attending and leave us a message."
+          >
+            <span></span>
+          </p>
 
-            <div class="wish-list">
-              <p>💌 Example wish...</p>
+          <div class="wish-box">
+            <input id="name" placeholder="Your Name" />
+
+            <div class="attendance">
+              <button
+                id="btnAttend"
+                class="attend-btn"
+                onclick="selectAttendance('Excited to attend')"
+              >
+                Excited to attend
+              </button>
+
+              <button
+                id="btnUnable"
+                class="attend-btn"
+                onclick="selectAttendance('Unable to attend')"
+              >
+                Unable to attend
+              </button>
+            </div>
+
+            <div class="guest-counter">
+              <button onclick="changeGuest(-1)">-</button>
+
+              <span id="guestCount">1</span>
+
+              <button onclick="changeGuest(1)">+</button>
+            </div>
+
+            <textarea id="wish" placeholder="Give your wish"></textarea>
+
+            <button class="wish-submit" onclick="submitWish()">Submit</button>
+          </div>
+        </section>
+
+        <!-- Video section -->
+
+        <section class="wishlist-section">
+          <div class="wishlist-overlay">
+            <h1>Wishes From Our Guests</h1>
+
+            <div id="wishContainer" class="wish-list"></div>
+          </div>
+        </section>
+
+        <section class="video-section">
+          <div class="video-overlay">
+            <h1>Prewedding</h1>
+
+            <div class="video-wrapper">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/O5bWDUi4__M"
+              >
+              </iframe>
             </div>
           </div>
         </section>
 
         <!-- SECTION 9 -->
         <section class="photo-section s9 section-9-custom">
-          <h1
-            class="typewriter thankyou-title"
-            data-text="Thank
-            "
-          >
+          <h1 class="typewriter thankyou-title" data-text="Thank">
             <span></span>
           </h1>
-          <h1
-            class="typewriter thankyou-title2"
-            data-text="
-            You"
-          >
+          <h1 class="typewriter thankyou-title2" data-text="You">
             <span></span>
           </h1>
         </section>
-
+        <!-- GALLERY MODAL -->
+        <div id="modal" class="gallery-modal" onclick="closeModal()">
+          <img id="modalImg" />
+        </div>
         <!-- SECTION 10 -->
         <!-- <section class="photo-section s10">
           <div class="gallery-preview">
@@ -300,58 +584,125 @@
         </section> -->
       </div>
     </div>
-
     <script>
+      const loadingCover = document.getElementById("loadingCover");
+
+      window.addEventListener("load", () => {
+        setTimeout(() => {
+          loadingCover.style.opacity = "0";
+
+          setTimeout(() => {
+            loadingCover.style.display = "none";
+          }, 1000);
+        }, 5000);
+      });
+      function openModal(src) {
+        const modal = document.getElementById("modal");
+        const img = document.getElementById("modalImg");
+
+        img.src = src;
+
+        modal.style.display = "flex";
+      }
+
+      function closeModal() {
+        document.getElementById("modal").style.display = "none";
+      }
+    </script>
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const guest = params.get("to");
+
+      const guestCover = document.getElementById("guestName");
+      const guestLeft = document.getElementById("guestNameLeft");
+
+      const guestName = guest ? decodeURIComponent(guest) : "Our Guest";
+
+      if (guestCover) guestCover.textContent = guestName;
+      if (guestLeft) guestLeft.textContent = guestName;
+      // COVER WEBSITE
       const btn = document.getElementById("openInvitation");
       const cover = document.getElementById("cover");
 
       btn.addEventListener("click", () => {
+        invitationOpened = true;
+
         cover.classList.add("hide-cover");
 
         setTimeout(() => {
           cover.style.display = "none";
+
+          scanVisibleTypewriters(); // run immediately
         }, 1000);
       });
-    </script>
-    <script>
+
+      // TYPEWRITER
+      function scanVisibleTypewriters() {
+        if (!invitationOpened) return;
+
+        document.querySelectorAll(".typewriter").forEach((el) => {
+          if (el.classList.contains("typed")) return;
+
+          const rect = el.getBoundingClientRect();
+
+          const visible =
+            rect.top < window.innerHeight * 0.9 && rect.bottom > 0;
+
+          if (visible) {
+            runTypewriter(el);
+          }
+        });
+      }
+
+      window.addEventListener("scroll", scanVisibleTypewriters);
+      function runTypewriter(el) {
+        if (el.classList.contains("typed")) return;
+
+        const text = (el.dataset.text || "").replace(/\s+/g, " ").trim();
+
+        if (!text) return;
+
+        el.classList.add("typed");
+
+        const span = el.querySelector("span");
+
+        let i = 0;
+        span.textContent = "";
+        el.style.opacity = 1;
+
+        function type() {
+          if (i < text.length) {
+            span.textContent += text.charAt(i);
+            i++;
+            setTimeout(type, 100);
+          }
+        }
+
+        type();
+      }
       /* TYPEWRITER ON SCROLL */
       const typeObserver = new IntersectionObserver(
         (entries) => {
+          if (!invitationOpened) return;
+
           entries.forEach((entry) => {
-            // if (!entry.isIntersecting) return;
-
-            const el = entry.target;
-            if (el.classList.contains("typed")) return;
-
-            el.classList.add("typed");
-
-            const text = el.dataset.text.replace(/\s+/g, " ").trim();
-            const span = el.querySelector("span");
-            let i = 0;
-
-            span.textContent = "";
-            el.style.opacity = 1;
-
-            function type() {
-              if (i < text.length) {
-                span.textContent += text.charAt(i);
-                i++;
-                setTimeout(type, 100);
-              }
+            if (entry.isIntersecting) {
+              runTypewriter(entry.target);
             }
-
-            type();
           });
         },
         {
-          threshold: 0.6,
+          threshold: 0.05,
         },
       );
 
-      document.querySelectorAll(".typewriter").forEach((el) => {
-        el.style.opacity = 0;
+      const typewriters = document.querySelectorAll(".typewriter");
+
+      typewriters.forEach((el) => {
         typeObserver.observe(el);
       });
+
+      setInterval(scanVisibleTypewriters, 500);
 
       /* FADE */
       const observer = new IntersectionObserver((entries) => {
@@ -373,6 +724,125 @@
         const m = document.getElementById("modal");
         document.getElementById("modalImg").src = src;
         m.style.display = "flex";
+      }
+    </script>
+    <script>
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyB5VPAyHw6sCSmfGZhqOAZCIQw6npyLfuM",
+        authDomain: "ico-dinda-wedding.firebaseapp.com",
+        projectId: "ico-dinda-wedding",
+        storageBucket: "ico-dinda-wedding.firebasestorage.app",
+        messagingSenderId: "517345824870",
+        appId: "1:517345824870:web:546072d5a219df9d05dda7",
+      };
+
+      firebase.initializeApp(firebaseConfig);
+
+      const db = firebase.firestore();
+    </script>
+    <script>
+      let attendanceValue = null;
+      let guestCount = 1;
+
+      function selectAttendance(value) {
+        attendanceValue = value;
+
+        document.querySelectorAll(".attend-btn").forEach((btn) => {
+          btn.classList.remove("active");
+        });
+
+        if (value === "Excited to attend") {
+          document.getElementById("btnAttend").classList.add("active");
+        } else {
+          document.getElementById("btnUnable").classList.add("active");
+        }
+      }
+
+      function changeGuest(num) {
+        guestCount += num;
+
+        if (guestCount < 1) guestCount = 1;
+        if (guestCount > 2) guestCount = 2;
+
+        document.getElementById("guestCount").innerText = guestCount;
+      }
+
+      async function submitWish() {
+        console.log("submit clicked");
+
+        let name = document.getElementById("name").value;
+        let wish = document.getElementById("wish").value;
+
+        console.log(name, wish, attendanceValue, guestCount);
+
+        if (!attendanceValue) {
+          alert("Please choose attendance status");
+          return;
+        }
+
+        await db.collection("wishes").add({
+          name: name,
+          wish: wish,
+          attendance: attendanceValue,
+          guests: guestCount,
+          timestamp: Date.now(),
+        });
+
+        alert("Wish submitted!");
+
+        // RESET FORM
+        document.getElementById("name").value = "";
+        document.getElementById("wish").value = "";
+        guestCount = 1;
+        document.getElementById("guestCount").innerText = 1;
+
+        attendanceValue = null;
+
+        document.querySelectorAll(".attend-btn").forEach((btn) => {
+          btn.classList.remove("active");
+        });
+      }
+      function loadWishes() {
+        const container = document.getElementById("wishContainer");
+
+        db.collection("wishes")
+          .orderBy("timestamp", "desc")
+          .onSnapshot((snapshot) => {
+            container.innerHTML = "";
+
+            snapshot.forEach((doc) => {
+              const data = doc.data();
+
+              container.innerHTML += `
+<div class="wish-item">
+<b>${data.name}</b>
+<p>${data.wish}</p>
+</div>
+`;
+            });
+          });
+      }
+
+      loadWishes();
+    </script>
+    <script>
+      function copyText(button, text) {
+        navigator.clipboard.writeText(text);
+
+        let icon = button.querySelector("i");
+
+        icon.classList.remove("fa-copy");
+        icon.classList.add("fa-check");
+
+        button.classList.add("copied");
+
+        setTimeout(() => {
+          icon.classList.remove("fa-check");
+          icon.classList.add("fa-copy");
+
+          button.classList.remove("copied");
+        }, 2000);
       }
     </script>
   </body>
