@@ -607,16 +607,17 @@
       setInterval(updateCountdown, 1000);
       updateCountdown();
 
+      //Loading cover
       const loadingCover = document.getElementById("loadingCover");
 
-      window.addEventListener("load", () => {
+      window.addEventListener("DOMContentLoaded", () => {
         setTimeout(() => {
           loadingCover.style.opacity = "0";
 
           setTimeout(() => {
             loadingCover.style.display = "none";
           }, 1000);
-        }, 1000);
+        }, 3000); // ⏱️ FIX 3 detik
       });
       function openModal(src) {
         const modal = document.getElementById("modal");
