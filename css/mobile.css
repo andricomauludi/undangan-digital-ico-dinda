@@ -892,7 +892,21 @@ textarea {
 }
 .section-5-custom .subtitle-s5 {
   position: absolute;
-  bottom: 15%;
+  bottom: 19%;
+  left: 10%;
+
+  font-size: clamp(25px, 15vw, 25px);
+
+  transform: rotate(-10deg);
+  transform-origin: left bottom;
+  font-family: "Indie Flower"; /* biar kontras sama judul */
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  max-width: 100%;
+}
+.section-5-custom .subtitle-s5-1 {
+  position: absolute;
+  bottom: 14%;
   left: 10%;
 
   font-size: clamp(25px, 15vw, 25px);
