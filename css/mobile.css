@@ -290,6 +290,7 @@ body {
   align-items: center;
 
   justify-content: space-between;
+  color: #fffbea;
 
   gap: 10px;
 }
@@ -302,7 +303,7 @@ body {
   letter-spacing: 1px;
 
   /* 🛑 Prevent Safari from auto-linking */
-  -webkit-touch-callout: none;  /* iOS */
+  -webkit-touch-callout: none; /* iOS */
   -webkit-user-select: text;
   -webkit-text-decoration: none; /* remove link style */
   text-decoration: none;
@@ -1032,8 +1033,11 @@ textarea {
   background: url("../assets/section-gallery.webp") center/cover no-repeat;
 
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
+
+  scroll-snap-align: start; /* section mulai snap di top */
+  scroll-snap-stop: always; /* tetap snap */
 
   padding: 20px 0; /* biar ada nafas */
 }
@@ -1046,7 +1050,7 @@ textarea {
 
   border-radius: 16px;
   padding: 10px;
-
+  flex-wrap: wrap; /* supaya konten bisa meluas ke bawah */
   display: flex;
   justify-content: center;
 
@@ -1128,7 +1132,7 @@ textarea {
   background-position: center;
 
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* top align supaya konten dari atas */
   justify-content: center;
   scroll-snap-align: start;
   scroll-snap-stop: always;
@@ -1145,6 +1149,7 @@ textarea {
   margin: 10px;
 
   display: flex;
+  flex-wrap: wrap; /* supaya konten bisa meluas ke bawah */
   justify-content: center;
 }
 

@@ -334,7 +334,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
+  color: #fffbea;
   gap: 10px;
 }
 
@@ -346,7 +346,7 @@ body {
   letter-spacing: 1px;
 
   /* 🛑 Prevent Safari from auto-linking */
-  -webkit-touch-callout: none;  /* iOS */
+  -webkit-touch-callout: none; /* iOS */
   -webkit-user-select: text;
   -webkit-text-decoration: none; /* remove link style */
   text-decoration: none;
@@ -1031,7 +1031,7 @@ body {
   background: url("../assets/section-gallery.webp") center/cover no-repeat;
 
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* top align supaya konten dari atas */
   justify-content: center;
   scroll-snap-align: start;
   scroll-snap-stop: always;
@@ -1050,6 +1050,7 @@ body {
 
   display: flex;
   justify-content: center;
+  flex-wrap: wrap; /* supaya konten bisa meluas ke bawah */
 
   /* ❌ HAPUS height */
 }
@@ -1110,7 +1111,7 @@ body {
   background-position: center;
 
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* top align supaya konten dari atas */
   justify-content: center;
   scroll-snap-align: start;
   scroll-snap-stop: always;
@@ -1128,6 +1129,7 @@ body {
 
   display: flex;
   justify-content: center;
+  flex-wrap: wrap; /* supaya konten bisa meluas ke bawah */
 }
 
 /* GRID */
