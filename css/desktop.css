@@ -811,7 +811,7 @@ body {
   bottom: 80px;
   left: 55px;
 
-  font-size: 30px;
+  font-size: clamp(25px, 15vw, 25px);
   transform: rotate(-10deg);
   transform-origin: left bottom;
   font-family: "Indie Flower"; /* biar kontras sama judul */
@@ -825,12 +825,47 @@ body {
   right: 10px;
   font-family: "Indie Flower"; /* biar kontras sama judul */
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
-  font-size: 30px;
+  font-size: clamp(20px, 15vw, 30px);
   transform: rotate(-10deg);
   transform-origin: right bottom;
-
+  color: #fffbea;
   text-align: center;
   max-width: 80%;
+}
+
+/* Countdown & Button */
+#countdown {
+  font-family: "Indie Flower";
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+  font-size: clamp(20px, 8vw, 30px);
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+  transform: rotate(-10deg);
+  transform-origin: right bottom;
+  text-align: center;
+  max-width: 80%;
+}
+
+.add-calendar-btn {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  padding: 10px 22px;
+  font-size: clamp(12px, 3vw, 16px);
+  border-radius: 25px;
+  border: none;
+  background-color: #fffbea;
+  color: #000;
+  cursor: pointer;
+  font-family: sans-serif;
+  transform: rotate(-10deg);
+  text-align: center;
+  transition: 0.3s;
+}
+
+.add-calendar-btn:hover {
+  background-color: #f0e6c8;
 }
 
 /* =========================
@@ -1578,6 +1613,22 @@ body {
 
 .wish-row.right {
   justify-content: flex-end;
+}
+
+/* LEFT ALIGN */
+.wish-row.left .wish-content {
+  text-align: left; /* teks rata kiri */
+  align-items: flex-start; /* anak flex ikut kiri */
+  margin-left: 0;
+  margin-right: auto;
+}
+
+/* RIGHT ALIGN */
+.wish-row.right .wish-content {
+  text-align: right; /* teks rata kanan */
+  align-items: flex-end; /* anak flex ikut kanan */
+  margin-left: auto;
+  margin-right: 0;
 }
 
 /* CONTENT (NO BOX, JUST TEXT) */

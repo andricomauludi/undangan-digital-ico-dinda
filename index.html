@@ -29,7 +29,6 @@
   <body>
     <div id="loadingCover">
       <div class="loading-content">
-      
         <div class="loading-line"></div>
 
         <p class="loading-text">Loading Invitation</p>
@@ -355,10 +354,7 @@
               />
               <img src="assets/gallery18.webp" onclick="openModal(this.src)" />
               <img src="assets/gallery19.webp" onclick="openModal(this.src)" />
-              <img
-                src="assets/gallery20.webp"                
-                onclick="openModal(this.src)"
-              />
+              <img src="assets/gallery20.webp" onclick="openModal(this.src)" />
             </div>
           </div>
         </section>
@@ -392,13 +388,13 @@
           >
             <span></span>
           </h1>
-          <h1
-            class="typewriter subtitle-s5-2"
-            data-text="
-    Come on time so you won't miss a thing!"
-          >
+          <h1 class="subtitle-s5-2" id="countdown">
             <span></span>
           </h1>
+
+          <button id="addCalendarBtn" class="add-calendar-btn">
+            Add to Calendar
+          </button>
         </section>
         <!-- SECTION 6 -->
         <section class="photo-section s6 section-6-custom">
@@ -586,6 +582,31 @@
       </div>
     </div>
     <script>
+      //COUNTDOWN
+      function updateCountdown() {
+        // Tanggal target: 6 Juni 2026 18:30 WIB
+        const target = new Date(Date.UTC(2026, 5, 6, 11, 30, 0)); // UTC+0 = WIB-7
+        const now = new Date();
+        const diff = target - now;
+
+        if (diff <= 0) {
+          document.getElementById("countdown").innerText = "It's time!";
+          return;
+        }
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((diff / (1000 * 60)) % 60);
+        const seconds = Math.floor((diff / 1000) % 60);
+
+        document.getElementById("countdown").innerText =
+          `${days}d ${hours}h ${minutes}m ${seconds}s`;
+      }
+
+      // Update setiap detik
+      setInterval(updateCountdown, 1000);
+      updateCountdown();
+
       const loadingCover = document.getElementById("loadingCover");
 
       window.addEventListener("load", () => {
@@ -609,8 +630,20 @@
       function closeModal() {
         document.getElementById("modal").style.display = "none";
       }
-    </script>
-    <script>
+
+      //ADD TO CALENDAR
+      const addBtn = document.getElementById("addCalendarBtn");
+      addBtn.addEventListener("click", () => {
+        const start = "20260606T183000"; // 6 Juni 2026 18:30 WIB
+        const end = "20260606T210000"; // 6 Juni 2026 21:00 WIB
+
+        const calendarUrl = `https://www.google.com/calendar/render?action=TEMPLATE&text=Wedding+Event&dates=${start}/${end}&details=Save+the+Date!&location=&sf=true&output=xml`;
+
+        window.open(calendarUrl, "_blank");
+      });
+
+      //PARAMS URL
+
       const params = new URLSearchParams(window.location.search);
       const guest = params.get("to");
 
@@ -828,7 +861,7 @@
         const container = document.getElementById("wishContainer");
 
         db.collection("wishes")
-          .orderBy("timestamp", "asc")
+          .orderBy("timestamp", "desc")
           .onSnapshot((snapshot) => {
             container.innerHTML = "";
 
