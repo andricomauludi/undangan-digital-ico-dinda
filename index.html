@@ -214,6 +214,69 @@
             <span></span>
           </h1>
         </section>
+        <!-- SECTION 5 -->
+        <section class="photo-section s5 section-5-custom">
+          <h1
+            class="typewriter title-s5"
+            data-text="
+    Save The Date!"
+          >
+            <span></span>
+          </h1>
+          <h1
+            class="typewriter title-s5-2"
+            data-text="
+    06 / 06 / 26"
+          >
+            <span></span>
+          </h1>
+          <h1
+            class="typewriter title-s5-3"
+            data-text="
+    18:30 – 21:00"
+          >
+            <span></span>
+          </h1>
+          <h1
+            class="typewriter subtitle-s5"
+            data-text="
+    Open gate: 18:30"
+          >
+            <span></span>
+          </h1>
+          <h1 class="subtitle-s5-2" id="countdown">
+            <span></span>
+          </h1>
+
+          <button id="addCalendarBtn" class="add-calendar-btn">
+            Add to Calendar
+          </button>
+        </section>
+        <!-- SECTION 6 -->
+        <section class="photo-section s6 section-6-custom">
+          <h1 class="typewriter title-s6" data-text="At">
+            <span></span>
+          </h1>
+          <h1 class="typewriter title-s6-2" data-text="Casa">
+            <span></span>
+          </h1>
+          <h1 class="typewriter title-s6-3" data-text="Milieu">
+            <span></span>
+          </h1>
+          <h1 class="typewriter title-s6-4" data-text="Citraland Surabaya">
+            <span></span>
+          </h1>
+          <div>
+            <button
+              class="btn-hover fade-in"
+              onclick="
+                window.open('https://maps.google.com/?q=Casa+Milieu+Surabaya')
+              "
+            >
+              View Maps
+            </button>
+          </div>
+        </section>
 
         <!-- OUR STORY -->
         <section class="story-section">
@@ -358,69 +421,6 @@
               <img src="assets/gallery19.webp" onclick="openModal(this.src)" />
               <img src="assets/gallery20.webp" onclick="openModal(this.src)" />
             </div>
-          </div>
-        </section>
-        <!-- SECTION 5 -->
-        <section class="photo-section s5 section-5-custom">
-          <h1
-            class="typewriter title-s5"
-            data-text="
-    Save The Date!"
-          >
-            <span></span>
-          </h1>
-          <h1
-            class="typewriter title-s5-2"
-            data-text="
-    06 / 06 / 26"
-          >
-            <span></span>
-          </h1>
-          <h1
-            class="typewriter title-s5-3"
-            data-text="
-    18:30 – 21:00"
-          >
-            <span></span>
-          </h1>
-          <h1
-            class="typewriter subtitle-s5"
-            data-text="
-    Open gate: 18:30"
-          >
-            <span></span>
-          </h1>
-          <h1 class="subtitle-s5-2" id="countdown">
-            <span></span>
-          </h1>
-
-          <button id="addCalendarBtn" class="add-calendar-btn">
-            Add to Calendar
-          </button>
-        </section>
-        <!-- SECTION 6 -->
-        <section class="photo-section s6 section-6-custom">
-          <h1 class="typewriter title-s6" data-text="At">
-            <span></span>
-          </h1>
-          <h1 class="typewriter title-s6-2" data-text="Casa">
-            <span></span>
-          </h1>
-          <h1 class="typewriter title-s6-3" data-text="Milieu">
-            <span></span>
-          </h1>
-          <h1 class="typewriter title-s6-4" data-text="Citraland Surabaya">
-            <span></span>
-          </h1>
-          <div>
-            <button
-              class="btn-hover fade-in"
-              onclick="
-                window.open('https://maps.google.com/?q=Casa+Milieu+Surabaya')
-              "
-            >
-              View Maps
-            </button>
           </div>
         </section>
 
@@ -635,14 +635,49 @@
       }
 
       //ADD TO CALENDAR
+      // const addBtn = document.getElementById("addCalendarBtn");
+      // addBtn.addEventListener("click", () => {
+      //   const start = "20260606T183000"; // 6 Juni 2026 18:30 WIB
+      //   const end = "20260606T210000"; // 6 Juni 2026 21:00 WIB
+
+      //   const calendarUrl = `https://www.google.com/calendar/render?action=TEMPLATE&text=Wedding+Event&dates=${start}/${end}&details=Save+the+Date!&location=&sf=true&output=xml`;
+
+      //   window.open(calendarUrl, "_blank");
+      // });
+
       const addBtn = document.getElementById("addCalendarBtn");
+
       addBtn.addEventListener("click", () => {
-        const start = "20260606T183000"; // 6 Juni 2026 18:30 WIB
-        const end = "20260606T210000"; // 6 Juni 2026 21:00 WIB
+        const start = "20260606T113000Z"; // UTC (WIB 18:30 = UTC 11:30)
+        const end = "20260606T140000Z"; // UTC (WIB 21:00 = UTC 14:00)
 
-        const calendarUrl = `https://www.google.com/calendar/render?action=TEMPLATE&text=Wedding+Event&dates=${start}/${end}&details=Save+the+Date!&location=&sf=true&output=xml`;
+        const icsContent = `
+BEGIN:VCALENDAR
+VERSION:2.0
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:${Date.now()}@yourdomain.com
+DTSTAMP:${new Date().toISOString().replace(/[-:]/g, "").split(".")[0]}Z
+SUMMARY:Wedding of Dinda & Andrico
+DESCRIPTION:Save the Date! Join our special day
+LOCATION:Casa Milieu Surabaya, Indonesia
+DTSTART:${start}
+DTEND:${end}
+END:VEVENT
+END:VCALENDAR
+`.trim();
 
-        window.open(calendarUrl, "_blank");
+        const blob = new Blob([icsContent], { type: "text/calendar" });
+        const url = URL.createObjectURL(blob);
+
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "wedding-event.ics";
+        document.body.appendChild(a);
+        a.click();
+
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
       });
 
       //PARAMS URL
