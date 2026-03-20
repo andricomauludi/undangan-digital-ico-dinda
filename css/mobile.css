@@ -289,10 +289,15 @@ body {
 
   align-items: center;
 
-  justify-content: space-between;
+  justify-content: center;
   color: #fffbea;
 
-  gap: 10px;
+  gap: 5px;
+  /* 
+   justify-content: space-between;
+  color: #fffbea;
+
+  gap: 10px; */
 }
 
 /* NOMOR REKENING */
@@ -615,7 +620,7 @@ textarea {
 
 .section-32-custom .groom-name {
   position: absolute;
-  top: 42%;
+  top: 40%;
   left: 5%;
   font-size: clamp(20px, 4vw, 28px);
   font-family: "Indie Flower"; /* biar kontras sama judul */
@@ -629,7 +634,7 @@ textarea {
 }
 .section-32-custom .groom-born {
   position: absolute;
-  top: 45%;
+  top: 43%;
   left: 5%;
   font-size: clamp(20px, 4vw, 28px);
   font-family: "Indie Flower"; /* biar kontras sama judul */
@@ -643,7 +648,7 @@ textarea {
 }
 .section-32-custom .groom-ig {
   position: absolute;
-  top: 48%;
+  top: 46%;
   left: 5%;
   font-size: clamp(20px, 4vw, 28px);
   font-family: "Indie Flower"; /* biar kontras sama judul */
@@ -715,7 +720,7 @@ textarea {
 .section-4-custom .groom-parent-s4-2 {
   position: absolute;
   top: 30%;
-  right: 7%;
+  right: 4%;
   font-family: "Indie Flower";
   font-size: 5vw;
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
@@ -911,7 +916,7 @@ textarea {
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease; /* Animasi halus */
-  margin-top: 600px;
+  margin-top: 100%;
 }
 
 /* Efek hover */
@@ -1025,64 +1030,53 @@ textarea {
 /* ========================= */
 /* GALLERY SECTION */
 /* ========================= */
-
 .gallery-section {
-  min-height: 100dvh; /* ✅ minimal 1 layar */
-  background-attachment: scroll; /* aman untuk mobile */
-
+  position: relative; /* untuk pseudo overlay */
+  min-height: 100dvh;
+  min-height: 100vh;
+  height: auto;
   background: url("../assets/section-gallery.webp") center/cover no-repeat;
+  background-attachment: scroll;
 
   display: flex;
   align-items: flex-start;
   justify-content: center;
 
-  scroll-snap-align: start; /* section mulai snap di top */
-  scroll-snap-stop: always; /* tetap snap */
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 
-  padding: 20px 0; /* biar ada nafas */
+  padding: 20px 0;
 }
 
-/* OVERLAY */
-.gallery-overlay {
-  width: min(92%, 1100px);
-
-  background: rgba(0, 0, 0, 0.5);
-
-  border-radius: 16px;
-  padding: 10px;
-  flex-wrap: wrap; /* supaya konten bisa meluas ke bawah */
-  display: flex;
-  justify-content: center;
-
-  /* ❌ HAPUS height */
+/* Pseudo overlay untuk aksen gelap */
+.gallery-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35); /* aksen gelap di atas background */
+  z-index: 1;
 }
 
-/* GRID (AUTO RESPONSIVE) */
+/* GRID LANGSUNG DI SECTION */
 .gallery-tiles {
-  width: 100%;
-
+  position: relative; /* supaya di atas overlay */
+  z-index: 2;
+  margin: 0 auto; /* ❌ PENTING: bikin grid di tengah */
+  width: min(92%, 1100px);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-
   grid-auto-rows: clamp(90px, 10vw, 140px);
-
   gap: clamp(4px, 1vw, 10px);
 }
-/* IMAGE */
 
+/* IMAGE */
 .gallery-tiles img {
   width: 100%;
   height: 100%;
-
   object-fit: cover;
-
   border-radius: 8px;
-
   transition: 0.3s;
-}
-
-.gallery-tiles img:hover {
-  transform: scale(1.05);
+  cursor: pointer;
 }
 
 .gallery-tiles img:hover {
@@ -1090,7 +1084,6 @@ textarea {
 }
 
 /* TILE VARIANTS */
-
 .tile-big {
   grid-column: span 2;
   grid-row: span 2;
@@ -1103,11 +1096,14 @@ textarea {
 .tile-horizontal {
   grid-column: span 2;
 }
+
+/* MEDIA QUERIES */
 @media (max-width: 480px) {
   .gallery-tiles {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
 @media (max-width: 768px) {
   .gallery-section {
     align-items: flex-start;
