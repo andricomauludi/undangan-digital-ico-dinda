@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="css/desktop.css" media="(min-width: 769px)" />
     <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
-
+    <meta name="format-detection" content="telephone=no" />
     <!-- INDIE FLOWER FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -27,21 +27,16 @@
     <script></script>
   </head>
   <body>
-    <div id="loadingCover">
+    <!-- <div id="loadingCover">
       <div class="loading-content">
-        <!-- <h1 class="loading-couple">
-          Dinda <br />
-          <span>&</span> <br />
-          Andrico
-        </h1> -->
-
+      
         <div class="loading-line"></div>
 
         <p class="loading-text">Loading Invitation</p>
 
         <p class="loading-credit">Made with love by Dinda & Andrico</p>
       </div>
-    </div>
+    </div> -->
     <!-- OPEN INVITATION (GLOBAL OVERLAY) -->
     <div id="cover">
       <img src="assets/cover.webp" alt="Cover" class="cover-image" />
@@ -171,7 +166,6 @@
             <span></span>
           </h1>
           <!-- <i class="fa-brands fa-instagram"></i> -->
-          
         </section>
 
         <!-- SECTION 4 -->
@@ -259,7 +253,7 @@
           </div>
         </section>
         <!-- SECTION GALLERY -->
-        <section class="photo-section gallery-section">
+        <section class="gallery-section">
           <div class="gallery-overlay">
             <div class="gallery-tiles">
               <img
@@ -333,7 +327,7 @@
           </div>
         </section>
         <!-- SECTION GALLERY 2 -->
-        <section class="photo-section gallery-section-2">
+        <section class="gallery-section-2">
           <div class="gallery-overlay">
             <div class="gallery-tiles-2">
               <img
@@ -437,12 +431,17 @@
         <section class="photo-section fixed-bg s7">
           <h1 class="typewriter" data-text="Wedding Gift"><span></span></h1>
 
-          <p
+          <p class="fade-in">
+            Your presence is truly the best gift, but if you'd like to send a
+            little something. We provide you a digital envelope to make it
+            easier for you.
+          </p>
+          <!-- <p
             class="typewriter"
             data-text="Your presence is truly the best gift, but if you'd like to send a little something. We provide you a digital envelope to make it easier for you."
           >
             <span></span>
-          </p>
+          </p> -->
 
           <div class="gift-box">
             <div class="gift-row">
@@ -489,12 +488,15 @@
             Your presence means the world to us. Let us know if you'll be
             attending and leave us a message.
           </p> -->
-          <p
+          <!-- <p
             class="typewriter"
             data-text="Let us know if you'll be
             attending and leave us a message."
           >
             <span></span>
+          </p> -->
+          <p class="fade-in">
+            Let us know if you'll be attending and leave us a message.
           </p>
 
           <div class="wish-box">
@@ -538,7 +540,7 @@
           <div class="wishlist-overlay">
             <h1>Wishes From Our Guests</h1>
 
-            <div id="wishContainer" class="wish-list"></div>
+            <div id="wishContainer" class="wish-stream"></div>
           </div>
         </section>
 
@@ -769,15 +771,13 @@
       }
 
       async function submitWish() {
-        console.log("submit clicked");
-
         let name = document.getElementById("name").value;
         let wish = document.getElementById("wish").value;
 
         console.log(name, wish, attendanceValue, guestCount);
 
-        if (!attendanceValue) {
-          alert("Please choose attendance status");
+        if (!attendanceValue || !name || !wish) {
+          alert("Please complete the form");
           return;
         }
 
@@ -803,23 +803,53 @@
           btn.classList.remove("active");
         });
       }
+      function formatDate(timestamp) {
+        if (!timestamp) return "";
+
+        let date;
+
+        // kalau Firestore Timestamp
+        if (typeof timestamp === "object" && timestamp.toDate) {
+          date = timestamp.toDate();
+        }
+        // kalau number (millisecond)
+        else {
+          date = new Date(timestamp);
+        }
+
+        return date.toLocaleString("id-ID", {
+          day: "2-digit",
+          month: "short",
+          hour: "2-digit",
+          minute: "2-digit",
+        });
+      }
+
       function loadWishes() {
         const container = document.getElementById("wishContainer");
 
         db.collection("wishes")
-          .orderBy("timestamp", "desc")
+          .orderBy("timestamp", "asc")
           .onSnapshot((snapshot) => {
             container.innerHTML = "";
 
+            let index = 0;
+
             snapshot.forEach((doc) => {
               const data = doc.data();
+              const alignClass = index % 2 === 0 ? "left" : "right";
 
               container.innerHTML += `
-<div class="wish-item">
-<b>${data.name}</b>
-<p>${data.wish}</p>
+<div class="wish-row ${alignClass}">
+  <div class="wish-content">
+    <b>${data.name}</b>
+    <span class="wish-time">${formatDate(data.timestamp)}</span>
+    <p>${data.wish}</p>
+  </div>
 </div>
 `;
+
+              index++;
             });
           });
       }

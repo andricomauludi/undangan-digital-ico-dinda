@@ -4,44 +4,36 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: sans-serif;
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
 }
 
-html,
 body {
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
+  font-family: sans-serif;
 }
 
 #loadingCover {
   position: fixed;
   inset: 0;
-
   z-index: 1000;
-
   background: #000;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   transition: opacity 1s ease;
 }
 
 .loading-content {
   text-align: center;
-
   color: #fffbea;
 }
 
 .loading-couple {
   font-family: "Great Vibes", cursive;
-
-  font-size: 60px;
-
-  letter-spacing: 4px;
-
+  font-size: clamp(28px, 7vw, 60px);
+  letter-spacing: 3px;
   text-shadow: 0 4px 15px rgba(0, 0, 0, 0.85);
 }
 
@@ -52,30 +44,21 @@ body {
 /* loading line animation */
 
 .loading-line {
-  margin: 30px auto;
-
-  width: 160px;
+  margin: 20px auto;
+  width: 40%;
   height: 2px;
-
   background: rgba(255, 255, 255, 0.2);
-
   position: relative;
-
   overflow: hidden;
 }
 
 .loading-line::after {
   content: "";
-
   position: absolute;
-
   left: -40%;
-
   width: 40%;
   height: 100%;
-
   background: #fffbea;
-
   animation: loadingMove 1.5s infinite;
 }
 
@@ -89,15 +72,13 @@ body {
 }
 
 .loading-text {
-  font-size: 14px;
-
+  font-size: clamp(12px, 3vw, 14px);
   letter-spacing: 3px;
 
   opacity: 0.8;
 }
 
 .loading-credit {
-
   margin-top: 18px;
 
   font-size: 11px;
@@ -109,7 +90,6 @@ body {
   color: #fffbea;
 
   font-style: italic;
-
 }
 
 /* OPEN INVITATION */
@@ -134,6 +114,8 @@ body {
   justify-content: center;
   align-items: center;
   color: #fff;
+  text-align: center;
+  padding: 20px;
 }
 
 .cover-overlay button {
@@ -141,7 +123,6 @@ body {
   padding: 12px 28px;
   border-radius: 25px;
   border: none;
-  font-size: 16px;
   cursor: pointer;
 }
 
@@ -153,7 +134,7 @@ body {
   /* font-family: "Indie Flower"; */
   font-family: "Great Vibes";
 
-  font-size: 62px;
+  font-size: clamp(32px, 9vw, 62px);
 
   letter-spacing: 4px;
 
@@ -165,13 +146,13 @@ body {
 }
 
 .cover-couple span {
-  font-size: 28px;
+  font-size: clamp(14px, 4vw, 28px);
 }
 
 .cover-dear {
   margin-top: 30px;
 
-  font-size: 14px;
+  font-size: clamp(10px, 4vw, 14px);
 
   letter-spacing: 2px;
 
@@ -181,7 +162,7 @@ body {
 .cover-guest {
   margin-top: 6px;
 
-  font-size: 22px;
+  font-size: clamp(16px, 4vw, 22px);
 
   font-weight: 500;
 
@@ -202,10 +183,13 @@ body {
 }
 
 .photo-section {
-  height: 100vh;
+  min-height: 100dvh;
   background-size: cover;
   background-position: center;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   scroll-snap-align: start;
   scroll-snap-stop: always;
 }
@@ -239,7 +223,7 @@ body {
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
-  transition: 5s ease;
+  transition: 1.5s;
 }
 
 .fade-in.show {
@@ -260,6 +244,14 @@ body {
   border-radius: 14px;
 
   margin-top: 20px;
+}
+
+.gift-box {
+  width: 90%;
+  max-width: 360px;
+  padding: 20px;
+  border-radius: 14px;
+  background: rgba(0, 0, 0, 0.6);
 }
 
 /* ROW */
@@ -306,12 +298,16 @@ body {
 
 .rekening span {
   color: #fffbea;
+  font-size: 15px;
+  letter-spacing: 1px;
 
-  font-size: 14px;
-
-  letter-spacing: 0.8px;
+  /* 🛑 Prevent Safari from auto-linking */
+  -webkit-touch-callout: none;  /* iOS */
+  -webkit-user-select: text;
+  -webkit-text-decoration: none; /* remove link style */
+  text-decoration: none;
+  color: inherit; /* pastikan tetap warna normal */
 }
-
 /* COPY BUTTON */
 /* COPY BUTTON */
 
@@ -359,12 +355,16 @@ body {
 .wish-box {
   width: 90%;
   max-width: 480px;
+  width: 100%;
+  gap: 12px;
 }
 
 input,
 textarea {
   width: 100%;
+  opacity: 0.7;
   padding: 14px;
+  margin: 5px;
   border-radius: 20px;
   border: none;
   margin-top: 10px;
@@ -430,27 +430,9 @@ textarea {
   color: #fffbea;
   text-shadow: 0 4px 15px rgba(0, 0, 0, 0.85);
   opacity: 0;
-  transition: opacity 0.6s ease;
+  transition: opacity 0.1s ease;
+  font-size: clamp(20px, 6vw, 40px);
 }
-
-/* 
-.typewriter span {
-  border-right: 2px solid rgba(255, 255, 255, 0.8);
-  padding-right: 6px;
-  animation: blink 1s infinite;
-} */
-
-/* @keyframes blink {
-  0%,
-  50%,
-  100% {
-    border-color: rgba(255, 255, 255, 0.8);
-  }
-  25%,
-  75% {
-    border-color: transparent;
-  }
-} */
 
 /* SECTION 1 CUSTOM POSITION */
 .section-1-custom {
@@ -460,54 +442,53 @@ textarea {
 /* LEFT BOTTOM TEXT */
 .text-left-bottom {
   position: absolute;
-  left: 30px;
-  bottom: 340px;
+  left: 5%;
+  bottom: 35%;
+  font-size: 6vw;
   transform: rotate(-15deg);
   transform-origin: left bottom;
   text-align: left;
-  max-width: 70%;
-  font-size: 50px;
 }
 /* LEFT BOTTOM TEXT */
 .text-left-bottom2 {
   position: absolute;
-  left: 30px;
-  bottom: 290px;
+  left: 10%;
+  bottom: 30%;
   transform: rotate(-15deg);
   transform-origin: left bottom;
   text-align: left;
-  max-width: 70%;
-  font-size: 50px;
+  font-size: 6vw;
 }
 
 /* RIGHT BOTTOM TEXT */
+
 .text-right-bottom {
   position: absolute;
-  right: 40px;
-  bottom: 120px;
+  right: 5%;
+  bottom: 20%;
+  font-size: clamp(60px, 12vw, 80px);
   transform: rotate(10deg);
-  transform-origin: right bottom;
-  text-align: right;
-  max-width: 100%;
-  font-size: 80px;
 }
 
 .s1 h2 {
   font-family: "Indie Flower"; /* biar kontras sama judul */
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
-  font-size: 36px;
+  font-size: clamp(24px, 8vw, 50px);
 }
 
 /* SECTION 2*/
 /* for font inside section 2 */
 /* SECTION 2 BACKDROP */
+
 .section-2-text {
-  font-size: 20px;
-
+  width: 90%;
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 16px;
+  font-size: clamp(14px, 4vw, 20px);
   background: rgba(30, 29, 29, 0.515); /* putih bening */
-  padding: 32px 28px;
-  border-radius: 20px;
-
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+  font-family: "Indie Flower"; /* biar kontras sama judul */
   /* color: #e6e6e6; teks jadi kontras */
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
 }
@@ -519,9 +500,11 @@ textarea {
 }
 
 .section-2-surah {
-  font-size: 30px;
+  font-size: clamp(20px, 8vw, 30px);
   display: block;
   margin-top: 16px;
+  font-family: "Great Vibes", cursive;
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.85);
 }
 
 /* =========================
@@ -533,62 +516,56 @@ textarea {
 }
 
 /* THE BRIDE */
+
 .section-3-custom .bride-title {
   position: absolute;
-  top: 100px;
-  left: -30px;
-  font-size: 150px;
-  transform: rotate(-20deg);
+  top: 7%;
+  left: -5%;
+  font-size: clamp(60px, 35vw, 150px);
+  transform: rotate(-15deg);
   transform-origin: left top;
 }
 .section-3-custom .bride-title2 {
   position: absolute;
-  top: 200px;
-  left: 20px;
-  font-size: 150px;
-  transform: rotate(-20deg);
+  top: 20%;
+  left: -2%;
+  font-size: clamp(60px, 35vw, 150px);
+  transform: rotate(-15deg);
   transform-origin: left top;
 }
 
 /* NAME */
+
 .section-3-custom .bride-name {
   position: absolute;
-  bottom: 550px;
-  right: 20px;
-
-  font-size: 28px;
-  transform: rotate(10deg);
-  transform-origin: right bottom;
-  font-family: "Indie Flower"; /* biar kontras sama judul */
+  top: 42%;
+  right: 5%;
+  font-size: clamp(20px, 4vw, 28px);
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+  transform: rotate(10deg);
+  font-family: "Indie Flower";
   text-align: right;
-  max-width: 80%;
 }
+
 .section-3-custom .bride-born {
   position: absolute;
-  bottom: 510px;
-  right: 20px;
-
-  font-size: 28px;
-  transform: rotate(10deg);
-  transform-origin: right bottom;
-  font-family: "Indie Flower"; /* biar kontras sama judul */
+  top: 45%;
+  right: 5%;
+  font-size: clamp(20px, 4vw, 28px);
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+  transform: rotate(10deg);
+  font-family: "Indie Flower";
   text-align: right;
-  max-width: 80%;
 }
 .section-3-custom .bride-ig {
   position: absolute;
-  bottom: 470px;
-  right: 20px;
-
-  font-size: 28px;
-  transform: rotate(10deg);
-  transform-origin: right bottom;
-  font-family: "Indie Flower"; /* biar kontras sama judul */
+  top: 51%;
+  right: 5%;
+  font-size: clamp(20px, 4vw, 28px);
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+  transform: rotate(10deg);
+  font-family: "Indie Flower";
   text-align: right;
-  max-width: 80%;
 }
 
 /* =========================
@@ -600,30 +577,46 @@ textarea {
 }
 
 /* THE GROOM */
+
 .section-32-custom .groom-title {
   position: absolute;
-  top: 50px;
-  right: 20px;
-  font-size: 150px;
+  top: 5%;
+  right: 5%;
+  font-size: clamp(60px, 35vw, 150px);
   transform: rotate(15deg);
   transform-origin: right top;
 }
 .section-32-custom .groom-title2 {
   position: absolute;
-  top: 160px;
-  right: 20px;
-  font-size: 150px;
+  top: 15%;
+  right: 5%;
+  font-size: clamp(60px, 35vw, 150px);
   transform: rotate(15deg);
   transform-origin: right top;
 }
 
 /* NAME */
-.section-32-custom .groom-name {
+/* .section-32-custom .groom-name {
   position: absolute;
   bottom: 560px;
   left: 15px;
 
   font-size: 28px;
+  font-family: "Indie Flower"; 
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+  transform: rotate(-10deg);
+  transform-origin: left bottom;
+  font-family: "Indie Flower"; 
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+  text-align: left;
+  max-width: 100%;
+} */
+
+.section-32-custom .groom-name {
+  position: absolute;
+  top: 42%;
+  left: 5%;
+  font-size: clamp(20px, 4vw, 28px);
   font-family: "Indie Flower"; /* biar kontras sama judul */
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
   transform: rotate(-10deg);
@@ -631,15 +624,13 @@ textarea {
   font-family: "Indie Flower"; /* biar kontras sama judul */
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
   text-align: left;
-  max-width: 100%;
+  transform: rotate(-10deg);
 }
-/* NAME */
 .section-32-custom .groom-born {
   position: absolute;
-  bottom: 520px;
-  left: 15px;
-
-  font-size: 28px;
+  top: 45%;
+  left: 5%;
+  font-size: clamp(20px, 4vw, 28px);
   font-family: "Indie Flower"; /* biar kontras sama judul */
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
   transform: rotate(-10deg);
@@ -647,15 +638,13 @@ textarea {
   font-family: "Indie Flower"; /* biar kontras sama judul */
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
   text-align: left;
-  max-width: 100%;
+  transform: rotate(-10deg);
 }
-/* NAME */
 .section-32-custom .groom-ig {
   position: absolute;
-  bottom: 480px;
-  left: 15px;
-
-  font-size: 28px;
+  top: 48%;
+  left: 5%;
+  font-size: clamp(20px, 4vw, 28px);
   font-family: "Indie Flower"; /* biar kontras sama judul */
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
   transform: rotate(-10deg);
@@ -663,7 +652,7 @@ textarea {
   font-family: "Indie Flower"; /* biar kontras sama judul */
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
   text-align: left;
-  max-width: 100%;
+  transform: rotate(-10deg);
 }
 
 /* =========================
@@ -673,10 +662,10 @@ textarea {
   position: relative;
   overflow: hidden;
 }
-
+/* 
 .section-4-custom .groom-parent-s4 {
   position: absolute;
-  top: 210px;
+  top: 30%;
   right: 50px;
 
   font-size: 45px;
@@ -690,7 +679,7 @@ textarea {
   position: absolute;
   top: 270px;
   right: 15px;
-  font-family: "Indie Flower"; /* biar kontras sama judul */
+  font-family: "Indie Flower";
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
   font-size: 25px;
   transform: rotate(10deg);
@@ -703,7 +692,7 @@ textarea {
   position: absolute;
   top: 300px;
   right: 15px;
-  font-family: "Indie Flower"; /* biar kontras sama judul */
+  font-family: "Indie Flower"; 
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
   font-size: 25px;
   transform: rotate(10deg);
@@ -711,45 +700,70 @@ textarea {
 
   text-align: center;
   max-width: 50%;
+} */
+
+.section-4-custom .groom-parent-s4 {
+  position: absolute;
+  top: 22%;
+  right: 15%;
+  font-size: 10vw;
+  transform: rotate(10deg);
+  transform-origin: right top;
+  text-align: center;
+}
+.section-4-custom .groom-parent-s4-2 {
+  position: absolute;
+  top: 30%;
+  right: 7%;
+  font-family: "Indie Flower";
+  font-size: 5vw;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+  transform: rotate(10deg);
+  transform-origin: right top;
+  text-align: center;
+}
+.section-4-custom .groom-parent-s4-3 {
+  position: absolute;
+  top: 33%;
+  right: 5%;
+  font-family: "Indie Flower";
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+  font-size: 5vw;
+  transform: rotate(10deg);
+  transform-origin: right top;
+  text-align: center;
 }
 
 .section-4-custom .bride-parent-s4 {
   position: absolute;
-  top: 290px;
-  left: 0px;
-
-  font-size: 45px;
+  top: 32%;
+  left: 0%;
+  font-size: 10vw;
   transform: rotate(-10deg);
   transform-origin: left top;
-
   text-align: center;
-  max-width: 50%;
 }
 .section-4-custom .bride-parent-s4-2 {
   position: absolute;
-  top: 340px;
-  left: 30px;
+  top: 38%;
+  left: 7%;
   font-family: "Indie Flower"; /* biar kontras sama judul */
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
-  font-size: 25px;
+  font-size: 5vw;
   transform: rotate(-10deg);
   transform-origin: left top;
-
   text-align: center;
-  max-width: 50%;
 }
 .section-4-custom .bride-parent-s4-3 {
   position: absolute;
-  top: 370px;
-  left: 15px;
-
-  font-size: 25px;
-  transform: rotate(-10deg);
-  transform-origin: left top;
+  top: 41%;
+  left: 5%;
   font-family: "Indie Flower"; /* biar kontras sama judul */
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+  font-size: 5vw;
+  transform: rotate(-10deg);
+  transform-origin: left top;
   text-align: center;
-  max-width: 50%;
 }
 
 /* =========================
@@ -762,10 +776,10 @@ textarea {
 
 .section-5-custom .title-s5 {
   position: absolute;
-  top: 120px;
-  left: 20px;
+  top: 10%;
+  left: 5%;
 
-  font-size: 45px;
+  font-size: clamp(20px, 10vw, 45px);
   transform: rotate(-10deg);
   transform-origin: left top;
 
@@ -774,10 +788,10 @@ textarea {
 }
 .section-5-custom .title-s5-2 {
   position: absolute;
-  top: 170px;
-  left: 15px;
+  top: 17%;
+  left: 5%;
 
-  font-size: 90px;
+  font-size: 20vw;
   transform: rotate(-10deg);
   transform-origin: left top;
 
@@ -786,10 +800,11 @@ textarea {
 }
 .section-5-custom .title-s5-3 {
   position: absolute;
-  top: 230px;
-  right: 90px;
+  top: 20%;
+  right: 20%;
 
-  font-size: 45px;
+  font-size: clamp(30px, 15vw, 45px);
+
   transform: rotate(-10deg);
   transform-origin: right top;
 
@@ -798,10 +813,11 @@ textarea {
 }
 .section-5-custom .subtitle-s5 {
   position: absolute;
-  bottom: 150px;
-  left: 55px;
+  bottom: 15%;
+  left: 10%;
 
-  font-size: 45px;
+  font-size: clamp(30px, 15vw, 45px);
+
   transform: rotate(-10deg);
   transform-origin: left bottom;
   font-family: "Indie Flower"; /* biar kontras sama judul */
@@ -811,11 +827,12 @@ textarea {
 }
 .section-5-custom .subtitle-s5-2 {
   position: absolute;
-  bottom: 80px;
-  right: 10px;
+  bottom: 10%;
+  right: 5%;
   font-family: "Indie Flower"; /* biar kontras sama judul */
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
-  font-size: 30px;
+  font-size: clamp(20px, 15vw, 30px);
+
   transform: rotate(-10deg);
   transform-origin: right bottom;
 
@@ -833,10 +850,10 @@ textarea {
 
 .section-6-custom .title-s6 {
   position: absolute;
-  top: 120px;
-  left: 150px;
+  top: 12%;
+  left: 35%;
 
-  font-size: 35px;
+  font-size: 9vw;
   transform: rotate(-10deg);
   transform-origin: left top;
 
@@ -847,10 +864,10 @@ textarea {
 }
 .section-6-custom .title-s6-2 {
   position: absolute;
-  top: 170px;
-  left: 100px;
+  top: 17%;
+  left: 25%;
 
-  font-size: 90px;
+  font-size: 20vw;
   transform: rotate(-10deg);
   transform-origin: left top;
 
@@ -859,10 +876,10 @@ textarea {
 }
 .section-6-custom .title-s6-3 {
   position: absolute;
-  top: 250px;
-  left: 80px;
+  top: 27%;
+  left: 17%;
 
-  font-size: 90px;
+  font-size: 20vw;
   transform: rotate(-10deg);
   transform-origin: left top;
 
@@ -871,10 +888,10 @@ textarea {
 }
 .section-6-custom .title-s6-4 {
   position: absolute;
-  top: 340px;
-  left: 70px;
+  top: 37%;
+  left: 16%;
 
-  font-size: 35px;
+  font-size: 8vw;
   transform: rotate(-10deg);
   transform-origin: left top;
   font-family: "Indie Flower"; /* biar kontras sama judul */
@@ -923,9 +940,10 @@ textarea {
 }
 
 .s7 p {
-  font-size: 26px;
+  font-size: clamp(12px, 6vw, 20px);
   max-width: 320px;
   line-height: 1.6;
+  color: #fffbea;
   font-family: "Indie Flower"; /* biar kontras sama judul */
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
 }
@@ -962,7 +980,9 @@ textarea {
 .s8 p {
   font-family: "Indie Flower"; /* biar kontras sama judul */
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
-  font-size: 25px;
+  font-size: clamp(12px, 6vw, 20px);
+
+  color: #fffbea;
 }
 .btn-hover-s8 {
   background-color: #fffbea; /* Warna awal */
@@ -987,58 +1007,64 @@ textarea {
 /* Thank you title */
 .section-9-custom .thankyou-title {
   position: absolute;
-  top: 100px;
-  left: -30px;
-  font-size: 150px;
+  top: 10%;
+  left: -5%;
+  font-size: 32vw;
   transform: rotate(-20deg);
   transform-origin: left top;
 }
 .section-9-custom .thankyou-title2 {
   position: absolute;
-  top: 200px;
-  left: 20px;
-  font-size: 150px;
+  top: 20%;
+  left: 5%;
+  font-size: 32vw;
   transform: rotate(-20deg);
   transform-origin: left top;
 }
-
-/* GALLERY BACKGROUND */
+/* ========================= */
+/* GALLERY SECTION */
+/* ========================= */
 
 .gallery-section {
-  background-image: url("../assets/section-gallery.webp");
-  background-size: cover;
-  background-position: center;
+  min-height: 100dvh; /* ✅ minimal 1 layar */
+  background-attachment: scroll; /* aman untuk mobile */
+
+  background: url("../assets/section-gallery.webp") center/cover no-repeat;
 
   display: flex;
   align-items: center;
   justify-content: center;
+
+  padding: 20px 0; /* biar ada nafas */
 }
 
 /* OVERLAY */
-
 .gallery-overlay {
-  width: 92%;
-  height: 92%;
+  width: min(92%, 1100px);
 
   background: rgba(0, 0, 0, 0.5);
 
   border-radius: 16px;
-
   padding: 10px;
+
+  display: flex;
+  justify-content: center;
+
+  /* ❌ HAPUS height */
 }
 
-/* GRID */
-
+/* GRID (AUTO RESPONSIVE) */
 .gallery-tiles {
+  width: 100%;
+
   display: grid;
-
   grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 110px;
 
-  gap: 6px;
+  grid-auto-rows: clamp(90px, 10vw, 140px);
+
+  gap: clamp(4px, 1vw, 10px);
 }
-
-/* FOTO */
+/* IMAGE */
 
 .gallery-tiles img {
   width: 100%;
@@ -1047,9 +1073,19 @@ textarea {
   object-fit: cover;
 
   border-radius: 8px;
+
+  transition: 0.3s;
 }
 
-/* TILE */
+.gallery-tiles img:hover {
+  transform: scale(1.05);
+}
+
+.gallery-tiles img:hover {
+  transform: scale(1.05);
+}
+
+/* TILE VARIANTS */
 
 .tile-big {
   grid-column: span 2;
@@ -1063,10 +1099,30 @@ textarea {
 .tile-horizontal {
   grid-column: span 2;
 }
+@media (max-width: 480px) {
+  .gallery-tiles {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .gallery-section {
+    align-items: flex-start;
+  }
+}
+
+@media (min-width: 1200px) {
+  .gallery-tiles {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-auto-rows: 160px;
+  }
+}
+
 /* GALLERY SECTION 2 */
 /* GALLERY SECTION 2 */
 
 .gallery-section-2 {
+  min-height: 100dvh; /* ✅ minimal 1 layar */
+
   background-image: url("../assets/section-gallery2.webp");
   background-size: cover;
   background-position: center;
@@ -1074,58 +1130,93 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: center;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
 
 /* OVERLAY */
-
 .gallery-section-2 .gallery-overlay {
-  width: 92%;
-  height: 92%;
+  width: min(92%, 1100px);
 
   background: rgba(0, 0, 0, 0.5);
 
   border-radius: 16px;
+  padding: 12px;
+  margin: 10px;
 
-  padding: 10px;
+  display: flex;
+  justify-content: center;
 }
 
 /* GRID (SAMA SEPERTI GALLERY1) */
-
 .gallery-tiles-2 {
+  width: 100%;
+
   display: grid;
 
-  grid-template-columns: repeat(3, 1fr);
+  /* 🔥 beda: auto-fit biar lebih fleksibel */
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
 
-  grid-auto-rows: 110px;
+  /* 🔥 dynamic height */
+  grid-auto-rows: clamp(90px, 10vw, 140px);
 
-  gap: 6px;
+  /* 🔥 ini bikin layout lebih “acak rapi” */
+  grid-auto-flow: dense;
+
+  gap: clamp(6px, 1vw, 10px);
 }
 
 /* FOTO */
-
 .gallery-tiles-2 img {
   width: 100%;
   height: 100%;
 
   object-fit: cover;
 
-  border-radius: 8px;
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
+}
+
+.gallery-tiles-2 img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
 }
 
 /* TILE */
-
+/* BIG (lebih dominan) */
 .g2-big {
   grid-column: span 2;
   grid-row: span 2;
 }
 
+/* VERTICAL (lebih tinggi) */
 .g2-vertical {
-  grid-row: span 2;
+  grid-row: span 3;
 }
 
+/* HORIZONTAL (lebih lebar) */
 .g2-horizontal {
-  grid-column: span 2;
+  grid-column: span 3;
 }
+@media (max-width: 480px) {
+  .gallery-tiles-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .g2-horizontal {
+    grid-column: span 2;
+  }
+
+  .g2-vertical {
+    grid-row: span 2;
+  }
+}
+
 /* Modal */
 .gallery-modal {
   position: fixed;
@@ -1275,13 +1366,6 @@ textarea {
 
 /* FORM */
 
-.wish-box {
-  width: 100%;
-  max-width: 380px;
-  padding-top: 200px;
-  gap: 12px;
-}
-
 /* ATTEND BUTTON */
 
 .attend-btn {
@@ -1367,108 +1451,133 @@ textarea {
 .wish-box textarea {
   min-height: 100px;
 }
-
 /* ========================= */
-/* WISHLIST SECTION MOBILE */
+/* WISHLIST – NEW STYLE */
 /* ========================= */
 
 .wishlist-section {
-  height: 100vh;
+  min-height: 100dvh;
+  background: url("../assets/section-wishlist.webp") center/cover no-repeat;
 
-  background-image: url("../assets/section-wishlist.webp");
-  background-size: cover;
-  background-position: center;
-
+  position: relative;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 
   scroll-snap-align: start;
-  scroll-snap-stop: always;
 }
 
-/* OVERLAY */
+/* DARK OVERLAY */
+
+.wishlist-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+}
+
+/* CONTENT WRAPPER */
 
 .wishlist-overlay {
-  width: 92%;
-  height: 88%;
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  height: 100dvh;
 
-  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
 
-  border-radius: 16px;
-
-  padding: 24px;
+  display: flex;
+  flex-direction: column;
 }
 
 /* TITLE */
 
 .wishlist-overlay h1 {
   color: #fffbea;
+  text-align: center;
 
-  font-size: 24px;
-
+  font-size: clamp(20px, 6vw, 36px);
   margin-bottom: 20px;
 
-  font-family: "Indie Flower"; /* biar kontras sama judul */
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
-  text-align: center;
+  font-family: "Indie Flower";
 }
 
-/* LIST */
+/* STREAM CONTAINER */
 
-.wish-list {
+.wish-stream {
   flex: 1;
-
   overflow-y: auto;
 
-  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  padding: 10px 5px 40px;
 }
-/* ITEM */
 
-.wish-item {
-  background: rgba(255, 255, 255, 0.08);
+/* EACH ROW */
 
-  padding: 16px;
+.wish-row {
+  display: flex;
+  width: 100%;
+}
 
-  border-radius: 10px;
+/* LEFT ALIGN */
 
-  margin-bottom: 14px;
+.wish-row.left {
+  justify-content: flex-start;
+}
+
+/* RIGHT ALIGN */
+
+.wish-row.right {
+  justify-content: flex-end;
+}
+
+/* CONTENT (NO BOX, JUST TEXT) */
+
+.wish-content {
+  max-width: 75%;
+
+  color: #fffbea;
+
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  font-family: sans-serif;
+
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
 }
 
 /* NAME */
 
-.wish-item b {
-  color: #fffbea;
+.wish-content b {
+  font-size: clamp(14px, 4vw, 18px);
+}
 
-  font-size: 16px;
+/* TIME */
 
-  font-family: "Indie Flower"; /* biar kontras sama judul */
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
-  margin-bottom: 4px;
-
-  display: block;
+.wish-time {
+  font-size: clamp(9px, 2vw, 10px);
+  opacity: 0.7;
 }
 
 /* MESSAGE */
 
-.wish-item p {
-  color: #fffbea;
-
-  font-size: 14px;
-
-  font-family: "Indie Flower"; /* biar kontras sama judul */
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
-  line-height: 1.5;
-
-  opacity: 0.9;
+.wish-content p {
+  font-size: clamp(13px, 3.5vw, 16px);
+  line-height: 1.6;
 }
 
-.wish-list::-webkit-scrollbar {
-  width: 6px;
+/* SCROLLBAR */
+
+.wish-stream::-webkit-scrollbar {
+  width: 4px;
 }
 
-.wish-list::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.4);
+.wish-stream::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
   border-radius: 10px;
 }
 
@@ -1493,7 +1602,7 @@ textarea {
 .video-overlay {
   width: 90%;
   max-width: 900px;
-  margin-bottom: 300px;
+  margin-bottom: 100%;
   font-family: "Indie Flower"; /* biar kontras sama judul */
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
   background: rgba(0, 0, 0, 0.65);
