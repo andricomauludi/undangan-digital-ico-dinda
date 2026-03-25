@@ -17,6 +17,21 @@
     <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
     <meta name="format-detection" content="telephone=no" />
+    <!-- Open Graph (WhatsApp, Facebook, dll) -->
+    <meta property="og:title" content="Dinda & Andrico Wedding" />
+    <meta
+      property="og:description"
+      content="Join us on our special day 06/06/26"
+    />
+    <meta
+      property="og:image"
+      content="https://dinda-ico.my.id/assets/cover.webp"
+    />
+    <meta property="og:url" content="https://dinda-ico.my.id" />
+    <meta property="og:type" content="website" />
+
+    <!-- Optional (biar lebih bagus di beberapa platform) -->
+    <meta name="twitter:card" content="summary_large_image" />
     <!-- INDIE FLOWER FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -24,9 +39,25 @@
       href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap"
       rel="stylesheet"
     />
+    <!-- Favicon basic -->
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+
+    <!-- PNG fallback -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favicon.png"
+    />
+
+    <!-- Apple (iPhone home screen icon) -->
+    <link rel="apple-touch-icon" href="/assets/favicon.png" />
     <script></script>
   </head>
   <body>
+    <audio id="bgMusic" loop>
+      <source src="assets/backsound.mp3" type="audio/mpeg" />
+    </audio>
     <div id="loadingCover">
       <div class="loading-content">
         <div class="loading-line"></div>
@@ -47,7 +78,7 @@
           Andrico
         </h1>
 
-        <p class="cover-dear">Dear Mr/Mrs</p>
+        <p class="cover-dear">Dear Mr/Ms/Mrs</p>
 
         <h2 id="guestName" class="cover-guest">Guest</h2>
 
@@ -550,8 +581,6 @@
 
         <section class="video-section">
           <div class="video-overlay">
-            <h1>Prewedding</h1>
-
             <div class="video-wrapper">
               <iframe
                 width="560"
@@ -561,6 +590,9 @@
               </iframe>
             </div>
           </div>
+          <h1 class="typewriter our-wedding-title" data-text="Our Video">
+            <span></span>
+          </h1>
         </section>
 
         <!-- SECTION 9 -->
@@ -591,6 +623,13 @@
       </div>
     </div>
     <script>
+      //MUSIC
+      const music = document.getElementById("bgMusic");
+      document
+        .getElementById("openInvitation")
+        .addEventListener("click", () => {
+          music.play();
+        });
       //COUNTDOWN
       function updateCountdown() {
         // Tanggal target: 6 Juni 2026 18:30 WIB

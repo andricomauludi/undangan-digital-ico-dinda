@@ -1836,3 +1836,14 @@ body {
 
   border-radius: 12px;
 }
+
+
+.video-section .our-wedding-title {
+  position: absolute;
+  bottom: 5%;
+  left: 14%;
+  font-size: clamp(60px, 35vw, 150px);
+  transform: rotate(-5deg);
+  transform-origin: left top;
+}
+
