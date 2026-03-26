@@ -431,13 +431,20 @@ textarea {
   background-image: url("../assets/section10.webp");
 }
 
+
 .typewriter {
   font-family: "Great Vibes", cursive;
   color: #fffbea;
-  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.85);
-  opacity: 0;
-  transition: opacity 0.1s ease;
   font-size: clamp(20px, 6vw, 40px);
+
+  text-shadow: 
+    0 2px 4px rgba(0,0,0,0.4),
+    0 4px 10px rgba(0,0,0,0.3);
+
+  -webkit-font-smoothing: antialiased;
+
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 /* SECTION 1 CUSTOM POSITION */
@@ -528,7 +535,7 @@ textarea {
 .text-left-bottom {
   position: absolute;
   left: 5%;
-  bottom: 35%;
+  bottom: 30%;
   font-size: 6vw;
   transform: rotate(-15deg);
   transform-origin: left bottom;
@@ -538,7 +545,7 @@ textarea {
 .text-left-bottom2 {
   position: absolute;
   left: 10%;
-  bottom: 30%;
+  bottom: 25%;
   transform: rotate(-15deg);
   transform-origin: left bottom;
   text-align: left;
@@ -550,7 +557,7 @@ textarea {
 .text-right-bottom {
   position: absolute;
   right: 5%;
-  bottom: 20%;
+  bottom: 15%;
   font-size: clamp(60px, 12vw, 80px);
   transform: rotate(10deg);
 }
@@ -874,14 +881,14 @@ textarea {
 .section-5-custom .title-s5-2 {
   position: absolute;
   top: 17%;
-  left: 5%;
+  left: 7%;
 
-  font-size: clamp(40px, 19vw, 200px);
+  font-size: clamp(40px, 18vw, 150px);
   transform: rotate(-10deg);
   transform-origin: left top;
 
   text-align: center;
-  max-width: 90%; /* jangan sampai melebihi parent */
+  max-width: 100%; /* jangan sampai melebihi parent */
 }
 .section-5-custom .title-s5-3 {
   position: absolute;
@@ -1781,7 +1788,6 @@ textarea {
 
   border-radius: 12px;
 }
-
 
 .video-section .our-wedding-title {
   position: absolute;
