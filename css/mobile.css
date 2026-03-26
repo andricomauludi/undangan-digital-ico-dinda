@@ -15,7 +15,8 @@ body {
   -webkit-font-smoothing: subpixel-antialiased;
   -webkit-text-stroke: 1px transparent;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-weight: normal;
+  font-style: normal;
 
   transform: translateZ(0.1px);
 }
