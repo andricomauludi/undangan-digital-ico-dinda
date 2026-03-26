@@ -662,7 +662,7 @@ body {
 }
 .section-3-custom .bride-title2 {
   position: absolute;
-  top: 20%;
+  top: 15%;
   left: -2%;
   font-size: clamp(60px, 35vw, 100px);
   transform: rotate(-15deg);
