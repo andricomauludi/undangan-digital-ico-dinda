@@ -440,17 +440,10 @@ textarea {
 
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
 
+  text-rendering: optimizeLegibility;
+
   opacity: 0;
   transition: opacity 0.3s ease;
-}
-
-@supports (-webkit-touch-callout: none) {
-  .typewriter {
-    text-shadow:
-      0 2px 6px rgba(0, 0, 0, 0.6),
-      0.4px 0 0 currentColor,
-      -0.4px 0 0 currentColor;
-  }
 }
 
 /* SECTION 1 CUSTOM POSITION */
