@@ -13,6 +13,11 @@ html {
 body {
   font-family: sans-serif;
   -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-text-stroke: 1px transparent;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  transform: translateZ(0.1px);
 }
 
 #loadingCover {
