@@ -37,9 +37,6 @@ body {
   font-size: clamp(28px, 7vw, 60px);
   letter-spacing: 3px;
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
-  font-weight: 600 !important;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
 }
 
 .loading-couple span {
@@ -148,9 +145,6 @@ body {
   color: #fffbea;
 
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
-  font-weight: 600 !important;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
 }
 
 .cover-couple span {
@@ -445,15 +439,16 @@ textarea {
   font-size: clamp(20px, 6vw, 40px);
 
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
-  font-weight: 600 !important;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
 
-  text-rendering: optimizeLegibility;
+
+text-rendering: optimizeLegibility; 
+
 
   opacity: 0;
   transition: opacity 0.3s ease;
 }
+
+
 
 /* SECTION 1 CUSTOM POSITION */
 .section-1-custom {
@@ -573,9 +568,6 @@ textarea {
 .s1 h2 {
   font-family: "Indie Flower"; /* biar kontras sama judul */
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
-  font-weight: 600 !important;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
   font-size: clamp(24px, 8vw, 50px);
 }
 
@@ -591,9 +583,6 @@ textarea {
   font-size: clamp(14px, 4vw, 20px);
   background: rgba(30, 29, 29, 0.515); /* putih bening */
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
-  font-weight: 600 !important;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
   font-family: "Indie Flower"; /* biar kontras sama judul */
   /* color: #e6e6e6; teks jadi kontras */
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
@@ -611,9 +600,6 @@ textarea {
   margin-top: 16px;
   font-family: "Great Vibes", cursive;
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
-  font-weight: 600 !important;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
 }
 
 /* =========================
@@ -651,9 +637,6 @@ textarea {
   right: 5%;
   font-size: clamp(20px, 4vw, 28px);
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
-  font-weight: 600 !important;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
   transform: rotate(10deg);
   font-family: "Indie Flower";
   text-align: right;
@@ -665,9 +648,6 @@ textarea {
   right: 5%;
   font-size: clamp(20px, 4vw, 28px);
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
-  font-weight: 600 !important;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
   transform: rotate(10deg);
   font-family: "Indie Flower";
   text-align: right;
@@ -678,9 +658,6 @@ textarea {
   right: 5%;
   font-size: clamp(20px, 4vw, 28px);
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
-  font-weight: 600 !important;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
   transform: rotate(10deg);
   font-family: "Indie Flower";
   text-align: right;
@@ -721,16 +698,12 @@ textarea {
 
   font-size: 28px;
   font-family: "Indie Flower"; 
-text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
-font-weight: 600 !important;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;  transform: rotate(-10deg);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+  transform: rotate(-10deg);
   transform-origin: left bottom;
   font-family: "Indie Flower"; 
-text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
-font-weight: 600 !important;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;  text-align: left;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+  text-align: left;
   max-width: 100%;
 } */
 
@@ -741,16 +714,10 @@ font-weight: 600 !important;
   font-size: clamp(20px, 4vw, 28px);
   font-family: "Indie Flower"; /* biar kontras sama judul */
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
-  font-weight: 600 !important;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
   transform: rotate(-10deg);
   transform-origin: left bottom;
   font-family: "Indie Flower"; /* biar kontras sama judul */
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
-  font-weight: 600 !important;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
   text-align: left;
   transform: rotate(-10deg);
 }
@@ -761,16 +728,10 @@ font-weight: 600 !important;
   font-size: clamp(20px, 4vw, 28px);
   font-family: "Indie Flower"; /* biar kontras sama judul */
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
-  font-weight: 600 !important;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
   transform: rotate(-10deg);
   transform-origin: left bottom;
   font-family: "Indie Flower"; /* biar kontras sama judul */
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
-  font-weight: 600 !important;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
   text-align: left;
   transform: rotate(-10deg);
 }
@@ -781,16 +742,10 @@ font-weight: 600 !important;
   font-size: clamp(20px, 4vw, 28px);
   font-family: "Indie Flower"; /* biar kontras sama judul */
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
-  font-weight: 600 !important;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
   transform: rotate(-10deg);
   transform-origin: left bottom;
   font-family: "Indie Flower"; /* biar kontras sama judul */
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
-  font-weight: 600 !important;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
   text-align: left;
   transform: rotate(-10deg);
 }
@@ -819,9 +774,6 @@ font-weight: 600 !important;
   font-family: "Indie Flower";
   font-size: 5vw;
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
-  font-weight: 600 !important;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
   transform: rotate(10deg);
   transform-origin: right top;
   text-align: center;
@@ -832,9 +784,6 @@ font-weight: 600 !important;
   right: 5%;
   font-family: "Indie Flower";
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
-  font-weight: 600 !important;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
   font-size: 5vw;
   transform: rotate(10deg);
   transform-origin: right top;
@@ -856,9 +805,6 @@ font-weight: 600 !important;
   left: 7%;
   font-family: "Indie Flower"; /* biar kontras sama judul */
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
-  font-weight: 600 !important;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
   font-size: 5vw;
   transform: rotate(-10deg);
   transform-origin: left top;
@@ -870,9 +816,6 @@ font-weight: 600 !important;
   left: 5%;
   font-family: "Indie Flower"; /* biar kontras sama judul */
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
-  font-weight: 600 !important;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
   font-size: 5vw;
   transform: rotate(-10deg);
   transform-origin: left top;
@@ -935,9 +878,6 @@ font-weight: 600 !important;
   transform-origin: left bottom;
   font-family: "Indie Flower"; /* biar kontras sama judul */
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
-  font-weight: 600 !important;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
   text-align: center;
   max-width: 100%;
 }
@@ -952,9 +892,6 @@ font-weight: 600 !important;
   transform-origin: left bottom;
   font-family: "Indie Flower"; /* biar kontras sama judul */
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
-  font-weight: 600 !important;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
   text-align: center;
   max-width: 100%;
 }
@@ -964,9 +901,6 @@ font-weight: 600 !important;
   right: 10%;
   font-family: "Indie Flower"; /* biar kontras sama judul */
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
-  font-weight: 600 !important;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
   font-size: clamp(20px, 15vw, 30px);
   color: #fffbea;
   transform: rotate(-10deg);
@@ -980,9 +914,6 @@ font-weight: 600 !important;
 #countdown {
   font-family: "Indie Flower";
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
-  font-weight: 600 !important;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
   font-size: clamp(25px, 15vw, 40px);
   position: absolute;
   bottom: 14%;
@@ -1033,9 +964,6 @@ font-weight: 600 !important;
 
   font-family: "Indie Flower"; /* biar kontras sama judul */
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
-  font-weight: 600 !important;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
   text-align: center;
   max-width: 100%;
 }
@@ -1073,9 +1001,6 @@ font-weight: 600 !important;
   transform-origin: left top;
   font-family: "Indie Flower"; /* biar kontras sama judul */
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
-  font-weight: 600 !important;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
   text-align: center;
   max-width: 100%;
 }
@@ -1126,9 +1051,6 @@ font-weight: 600 !important;
   color: #fffbea;
   font-family: "Indie Flower"; /* biar kontras sama judul */
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
-  font-weight: 600 !important;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
 }
 
 .s7 .gift-box {
@@ -1163,9 +1085,6 @@ font-weight: 600 !important;
 .s8 p {
   font-family: "Indie Flower"; /* biar kontras sama judul */
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
-  font-weight: 600 !important;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
   font-size: clamp(12px, 6vw, 20px);
 
   color: #fffbea;
@@ -1466,9 +1385,6 @@ font-weight: 600 !important;
 
   font-family: "Indie Flower"; /* biar kontras sama judul */
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
-  font-weight: 600 !important;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
 }
 
 /* SUBTITLE */
@@ -1484,9 +1400,6 @@ font-weight: 600 !important;
 
   font-family: "Indie Flower"; /* biar kontras sama judul */
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
-  font-weight: 600 !important;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
 }
 
 /* TEXT */
@@ -1501,9 +1414,6 @@ font-weight: 600 !important;
   font-size: 16px;
   font-family: "Indie Flower"; /* biar kontras sama judul */
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
-  font-weight: 600 !important;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
 }
 
 @media (max-width: 768px) {
@@ -1799,9 +1709,7 @@ font-weight: 600 !important;
   margin-bottom: 140%;
   font-family: "Indie Flower"; /* biar kontras sama judul */
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
-  font-weight: 600 !important;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased; /* background: rgba(0, 0, 0, 0.35);
+  /* background: rgba(0, 0, 0, 0.35);
 
   padding: 40px;
 
