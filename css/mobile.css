@@ -441,8 +441,35 @@ textarea {
   font-family: "Great Vibes", cursive;
   color: #fffbea;
   font-size: clamp(20px, 6vw, 40px);
-  -webkit-font-smoothing: subpixel-antialiased;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+
+  /* 🔥 penting */
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+
+  /* 🔥 fake bold trick */
+  text-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.3),
+    0 0 0.5px rgba(0, 0, 0, 0.4),
+    0 0 1px rgba(0, 0, 0, 0.2);
+
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.typewriter {
+  font-family: "Great Vibes", cursive;
+  color: #fffbea;
+  font-size: clamp(20px, 6vw, 40px);
+
+  /* 🔥 penting */
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+
+  /* 🔥 fake bold trick */
+  text-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.3),
+    0 0 0.5px rgba(0, 0, 0, 0.4),
+    0 0 1px rgba(0, 0, 0, 0.2);
 
   opacity: 0;
   transition: opacity 0.3s ease;
