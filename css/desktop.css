@@ -325,17 +325,25 @@ body {
   margin-bottom: 6px;
 }
 
-/* REKENING + BUTTON */
+/* REKENING */
 
 .rekening {
   display: flex;
+
   align-items: center;
-  justify-content: space-between;
+
+  justify-content: center;
   color: #fffbea;
-  gap: 10px;
+
+  gap: 5px;
+  /* 
+   justify-content: space-between;
+  color: #fffbea;
+
+  gap: 10px; */
 }
 
-/* ACCOUNT NUMBER */
+/* NOMOR REKENING */
 
 .rekening span {
   color: #fffbea;
@@ -349,7 +357,6 @@ body {
   text-decoration: none;
   color: inherit; /* pastikan tetap warna normal */
 }
-
 /* COPY BUTTON */
 /* COPY BUTTON */
 
@@ -1780,7 +1787,7 @@ body {
 
 .video-section {
   height: 100vh;
-
+  position: relative;
   background-image: url("../assets/section-video.webp");
   background-size: cover;
   background-position: center;
@@ -1788,6 +1795,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 20px;
 
   scroll-snap-align: start;
   scroll-snap-stop: always;
@@ -1796,14 +1804,16 @@ body {
 /* OVERLAY */
 
 .video-overlay {
-  width: 90%;
+  width: 100%;
   max-width: 900px;
-
-  background: rgba(0, 0, 0, 0.65);
+  margin-bottom: 140%;
+  font-family: "Indie Flower"; /* biar kontras sama judul */
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+  /* background: rgba(0, 0, 0, 0.65);
 
   padding: 40px;
-  margin-bottom: 300px;
-  border-radius: 20px;
+
+  border-radius: 20px; */
 
   display: flex;
   flex-direction: column;
@@ -1815,11 +1825,9 @@ body {
 .video-overlay h1 {
   color: #fffbea;
 
-  font-family: "Indie Flower"; /* biar kontras sama judul */
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
   margin-bottom: 24px;
 
-  font-size: 34px;
+  font-size: 24px;
 
   text-align: center;
 }
@@ -1849,7 +1857,8 @@ body {
   position: absolute;
   bottom: 5%;
   left: 14%;
-  font-size: clamp(60px, 35vw, 150px);
+
+  font-size: clamp(60px, 19vw, 80px);
   transform: rotate(-5deg);
-  transform-origin: left top;
+  transform-origin: left bottom;
 }
