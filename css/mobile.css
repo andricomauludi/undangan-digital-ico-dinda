@@ -12,6 +12,7 @@ html {
 
 body {
   font-family: sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 
 #loadingCover {
@@ -34,7 +35,7 @@ body {
   font-family: "Great Vibes", cursive;
   font-size: clamp(28px, 7vw, 60px);
   letter-spacing: 3px;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
 }
 
 .loading-couple span {
@@ -142,7 +143,7 @@ body {
 
   color: #fffbea;
 
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
 }
 
 .cover-couple span {
@@ -436,7 +437,7 @@ textarea {
   color: #fffbea;
   font-size: clamp(20px, 6vw, 40px);
 
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
 
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -445,7 +446,7 @@ textarea {
 @supports (-webkit-touch-callout: none) {
   .typewriter {
     text-shadow:
-      0 2px 6px rgba(0,0,0,0.3),
+      0 2px 6px rgba(0, 0, 0, 0.6),
       0.4px 0 0 currentColor,
       -0.4px 0 0 currentColor;
   }
@@ -568,7 +569,7 @@ textarea {
 
 .s1 h2 {
   font-family: "Indie Flower"; /* biar kontras sama judul */
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
   font-size: clamp(24px, 8vw, 50px);
 }
 
@@ -583,7 +584,7 @@ textarea {
   border-radius: 16px;
   font-size: clamp(14px, 4vw, 20px);
   background: rgba(30, 29, 29, 0.515); /* putih bening */
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
   font-family: "Indie Flower"; /* biar kontras sama judul */
   /* color: #e6e6e6; teks jadi kontras */
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
@@ -600,7 +601,7 @@ textarea {
   display: block;
   margin-top: 16px;
   font-family: "Great Vibes", cursive;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
 }
 
 /* =========================
@@ -637,7 +638,7 @@ textarea {
   top: 42%;
   right: 5%;
   font-size: clamp(20px, 4vw, 28px);
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
   transform: rotate(10deg);
   font-family: "Indie Flower";
   text-align: right;
@@ -648,7 +649,7 @@ textarea {
   top: 45%;
   right: 5%;
   font-size: clamp(20px, 4vw, 28px);
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
   transform: rotate(10deg);
   font-family: "Indie Flower";
   text-align: right;
@@ -658,7 +659,7 @@ textarea {
   top: 51%;
   right: 5%;
   font-size: clamp(20px, 4vw, 28px);
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
   transform: rotate(10deg);
   font-family: "Indie Flower";
   text-align: right;
@@ -699,11 +700,11 @@ textarea {
 
   font-size: 28px;
   font-family: "Indie Flower"; 
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
   transform: rotate(-10deg);
   transform-origin: left bottom;
   font-family: "Indie Flower"; 
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
   text-align: left;
   max-width: 100%;
 } */
@@ -714,11 +715,11 @@ textarea {
   left: 5%;
   font-size: clamp(20px, 4vw, 28px);
   font-family: "Indie Flower"; /* biar kontras sama judul */
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
   transform: rotate(-10deg);
   transform-origin: left bottom;
   font-family: "Indie Flower"; /* biar kontras sama judul */
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
   text-align: left;
   transform: rotate(-10deg);
 }
@@ -728,11 +729,11 @@ textarea {
   left: 5%;
   font-size: clamp(20px, 4vw, 28px);
   font-family: "Indie Flower"; /* biar kontras sama judul */
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
   transform: rotate(-10deg);
   transform-origin: left bottom;
   font-family: "Indie Flower"; /* biar kontras sama judul */
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
   text-align: left;
   transform: rotate(-10deg);
 }
@@ -742,11 +743,11 @@ textarea {
   left: 5%;
   font-size: clamp(20px, 4vw, 28px);
   font-family: "Indie Flower"; /* biar kontras sama judul */
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
   transform: rotate(-10deg);
   transform-origin: left bottom;
   font-family: "Indie Flower"; /* biar kontras sama judul */
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
   text-align: left;
   transform: rotate(-10deg);
 }
@@ -774,7 +775,7 @@ textarea {
   right: 4%;
   font-family: "Indie Flower";
   font-size: 5vw;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
   transform: rotate(10deg);
   transform-origin: right top;
   text-align: center;
@@ -784,7 +785,7 @@ textarea {
   top: 33%;
   right: 5%;
   font-family: "Indie Flower";
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
   font-size: 5vw;
   transform: rotate(10deg);
   transform-origin: right top;
@@ -805,7 +806,7 @@ textarea {
   top: 38%;
   left: 7%;
   font-family: "Indie Flower"; /* biar kontras sama judul */
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
   font-size: 5vw;
   transform: rotate(-10deg);
   transform-origin: left top;
@@ -816,7 +817,7 @@ textarea {
   top: 41%;
   left: 5%;
   font-family: "Indie Flower"; /* biar kontras sama judul */
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
   font-size: 5vw;
   transform: rotate(-10deg);
   transform-origin: left top;
@@ -878,7 +879,7 @@ textarea {
   transform: rotate(-10deg);
   transform-origin: left bottom;
   font-family: "Indie Flower"; /* biar kontras sama judul */
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
   text-align: center;
   max-width: 100%;
 }
@@ -892,7 +893,7 @@ textarea {
   transform: rotate(-10deg);
   transform-origin: left bottom;
   font-family: "Indie Flower"; /* biar kontras sama judul */
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
   text-align: center;
   max-width: 100%;
 }
@@ -901,7 +902,7 @@ textarea {
   bottom: 14%;
   right: 10%;
   font-family: "Indie Flower"; /* biar kontras sama judul */
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
   font-size: clamp(20px, 15vw, 30px);
   color: #fffbea;
   transform: rotate(-10deg);
@@ -914,7 +915,7 @@ textarea {
 /* Countdown & Button */
 #countdown {
   font-family: "Indie Flower";
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
   font-size: clamp(25px, 15vw, 40px);
   position: absolute;
   bottom: 14%;
@@ -964,7 +965,7 @@ textarea {
   transform-origin: left top;
 
   font-family: "Indie Flower"; /* biar kontras sama judul */
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
   text-align: center;
   max-width: 100%;
 }
@@ -1001,7 +1002,7 @@ textarea {
   transform: rotate(-10deg);
   transform-origin: left top;
   font-family: "Indie Flower"; /* biar kontras sama judul */
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
   text-align: center;
   max-width: 100%;
 }
@@ -1051,7 +1052,7 @@ textarea {
   line-height: 1.6;
   color: #fffbea;
   font-family: "Indie Flower"; /* biar kontras sama judul */
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
 }
 
 .s7 .gift-box {
@@ -1085,7 +1086,7 @@ textarea {
 
 .s8 p {
   font-family: "Indie Flower"; /* biar kontras sama judul */
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
   font-size: clamp(12px, 6vw, 20px);
 
   color: #fffbea;
@@ -1245,7 +1246,7 @@ textarea {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.3); /* aksen gelap tipis */
+  background: rgba(0, 0, 0, 0.6); /* aksen gelap tipis */
   z-index: 0;
 }
 
@@ -1385,7 +1386,7 @@ textarea {
   margin-bottom: 10px;
 
   font-family: "Indie Flower"; /* biar kontras sama judul */
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
 }
 
 /* SUBTITLE */
@@ -1400,7 +1401,7 @@ textarea {
   opacity: 0.85;
 
   font-family: "Indie Flower"; /* biar kontras sama judul */
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
 }
 
 /* TEXT */
@@ -1414,7 +1415,7 @@ textarea {
 
   font-size: 16px;
   font-family: "Indie Flower"; /* biar kontras sama judul */
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
 }
 
 @media (max-width: 768px) {
@@ -1682,7 +1683,7 @@ textarea {
 }
 
 .wish-stream::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.6);
   border-radius: 10px;
 }
 
@@ -1709,7 +1710,7 @@ textarea {
   max-width: 900px;
   margin-bottom: 140%;
   font-family: "Indie Flower"; /* biar kontras sama judul */
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
   /* background: rgba(0, 0, 0, 0.35);
 
   padding: 40px;
