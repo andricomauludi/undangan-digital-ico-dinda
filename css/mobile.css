@@ -34,7 +34,7 @@ body {
   font-family: "Great Vibes", cursive;
   font-size: clamp(28px, 7vw, 60px);
   letter-spacing: 3px;
-  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.85);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
 .loading-couple span {
@@ -142,7 +142,7 @@ body {
 
   color: #fffbea;
 
-  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.85);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
 .cover-couple span {
@@ -431,17 +431,12 @@ textarea {
   background-image: url("../assets/section10.webp");
 }
 
-
 .typewriter {
   font-family: "Great Vibes", cursive;
   color: #fffbea;
   font-size: clamp(20px, 6vw, 40px);
 
-  text-shadow: 
-    0 2px 4px rgba(0,0,0,0.4),
-    0 4px 10px rgba(0,0,0,0.3);
-
-  -webkit-font-smoothing: antialiased;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -596,7 +591,7 @@ textarea {
   display: block;
   margin-top: 16px;
   font-family: "Great Vibes", cursive;
-  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.85);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
 /* =========================
