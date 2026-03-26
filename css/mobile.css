@@ -12,11 +12,7 @@ html {
 
 body {
   font-family: sans-serif;
-  -webkit-font-smoothing: subpixel-antialiased;
-
-  -webkit-font-smoothing: antialiased;
-  font-weight: normal;
-  font-style: normal;
+  font-weight: 400;
 }
 
 #loadingCover {
