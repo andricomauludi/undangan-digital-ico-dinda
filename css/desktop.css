@@ -784,7 +784,7 @@ body {
 .section-4-custom .groom-parent-s4 {
   position: absolute;
   top: 22%;
-  right: 15%;
+  right: 12%;
   font-size: clamp(28px, 3.1vw, 45px);
   transform: rotate(10deg);
   transform-origin: right top;

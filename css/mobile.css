@@ -213,11 +213,6 @@ body {
   background-attachment: fixed;
 }
 
-@supports (-webkit-touch-callout: none) {
-  .fixed-bg {
-    background-attachment: scroll;
-  }
-}
 
 /* EFFECTS */
 /* .typewriter span {
@@ -422,6 +417,10 @@ textarea {
 }
 .s7 {
   background-image: url("../assets/section7.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  left: 10px;
 }
 .s8 {
   background-image: url("../assets/section8.webp");
@@ -761,7 +760,7 @@ text-rendering: optimizeLegibility;
 .section-4-custom .groom-parent-s4 {
   position: absolute;
   top: 22%;
-  right: 15%;
+  right: 12%;
   font-size: 10vw;
   transform: rotate(10deg);
   transform-origin: right top;
