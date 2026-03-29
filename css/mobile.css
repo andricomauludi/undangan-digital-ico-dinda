@@ -534,7 +534,7 @@ textarea {
 .text-left-bottom {
   position: absolute;
   left: 5%;
-  bottom: 25%;
+  bottom: 27%;
   font-size: 5vw;
   transform: rotate(-15deg);
   transform-origin: left bottom;
@@ -544,7 +544,7 @@ textarea {
 .text-left-bottom2 {
   position: absolute;
   left: 10%;
-  bottom: 20%;
+  bottom: 22%;
   transform: rotate(-15deg);
   transform-origin: left bottom;
   text-align: left;
@@ -556,7 +556,7 @@ textarea {
 .text-right-bottom {
   position: absolute;
   right: 5%;
-  bottom: 15%;
+  bottom: 17%;
   font-size: clamp(55px, 12vw, 70px);
   transform: rotate(10deg);
 }
