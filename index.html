@@ -113,24 +113,42 @@
           <div class="bg-slide bg2"></div>
           <h2
             class="typewriter text-left-bottom"
-            data-text="We're tying the knot"
+            data-text="We’re getting hitched"
           >
             <span></span>
           </h2>
+          <!-- <h2
+            class="typewriter text-left-bottom"
+            data-text="We're tying the knot"
+          >
+            <span></span>
+          </h2> -->
           <br />
           <h2
+            class="typewriter text-left-bottom2"
+            data-text="and you are part of"
+          >
+            <span></span>
+          </h2>
+          <!-- <h2
             class="typewriter text-left-bottom2"
             data-text="and you're on the"
           >
             <span></span>
-          </h2>
+          </h2> -->
 
           <h1
+            class="typewriter text-right-bottom great-vibes"
+            data-text="The Day!"
+          >
+            <span></span>
+          </h1>
+          <!-- <h1
             class="typewriter text-right-bottom great-vibes"
             data-text="Guest List!"
           >
             <span></span>
-          </h1>
+          </h1> -->
         </section>
         <!-- <section class="photo-section fixed-bg s1">
           <h1
@@ -144,12 +162,12 @@
         <!-- SECTION 2 -->
         <section class="photo-section s2">
           <p class="fade-in section-2-text section-2-center-text">
-            “And one of His signs is that He created for you spouses from among
-            yourselves so that you may find comfort in them. And He has placed
-            between you compassion and mercy. Surely in this are signs for
-            people who reflect.”
+            “Wicked women are for wicked men, and wicked men are for wicked
+            women. And virtuous women are for virtuous men, and virtuous men are
+            for virtuous women. The virtuous are innocent of what the wicked
+            say. They will have forgiveness and an honourable provision.”
             <br /><br />
-            <b class="section-2-surah">QS. Ar-Rum : 21</b>
+            <b class="section-2-surah">QS. An-Nur : 24</b>
           </p>
         </section>
 
@@ -456,8 +474,16 @@
                 onclick="openModal(this.src)"
               />
               <img src="assets/gallery18.webp" onclick="openModal(this.src)" />
-              <img src="assets/gallery19.webp" onclick="openModal(this.src)" />
-              <img src="assets/gallery20.webp" onclick="openModal(this.src)" />
+              <img
+                src="assets/gallery19.webp"
+                class="g2-added"
+                onclick="openModal(this.src)"
+              />
+              <img
+                src="assets/gallery20.webp"
+                class="g2-added"
+                onclick="openModal(this.src)"
+              />
             </div>
           </div>
         </section>
@@ -467,9 +493,8 @@
           <h1 class="typewriter" data-text="Wedding Gift"><span></span></h1>
 
           <p class="fade-in">
-            Your presence is truly the best gift, but if you'd like to send a
-            little something. We provide you a digital envelope to make it
-            easier for you.
+            Your presence is the greatest gift, but should you wish to extend a
+            token of love, a digital envelope is available for your convenience.
           </p>
           <!-- <p
             class="typewriter"
@@ -603,6 +628,12 @@
           <h1 class="typewriter thankyou-title2" data-text="You">
             <span></span>
           </h1>
+          <h1
+            class="typewriter thankyou-title3"
+            data-text="Made with love by Dinda & Andrico"
+          >
+            <span></span>
+          </h1>
         </section>
         <!-- GALLERY MODAL -->
         <div id="modal" class="gallery-modal" onclick="closeModal()">
@@ -625,6 +656,7 @@
     <script>
       //MUSIC
       const music = document.getElementById("bgMusic");
+      music.volume = 0.4;
       document
         .getElementById("openInvitation")
         .addEventListener("click", () => {

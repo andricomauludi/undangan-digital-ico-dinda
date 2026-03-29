@@ -1155,6 +1155,18 @@ body {
   transform-origin: left top;
 }
 
+.section-9-custom .thankyou-title3 {
+  font-family: "Indie Flower"; /* biar kontras sama judul */
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+  font-size: clamp(12px, 6vw, 20px);
+  position: absolute;
+  bottom: 13%;
+  right: 7%;
+  font-size: 5vw;
+  transform: rotate(-8deg);
+  transform-origin: right bottom;
+}
+
 /* GALLERY SECTION BACKGROUND */
 
 .gallery-section {
@@ -1315,6 +1327,9 @@ body {
 }
 
 .g2-horizontal {
+  grid-column: span 2;
+}
+.g2-added {
   grid-column: span 2;
 }
 /* MODAL */
