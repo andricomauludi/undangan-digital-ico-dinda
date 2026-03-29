@@ -941,7 +941,7 @@ END:VCALENDAR
         let name = document.getElementById("name").value;
         let wish = document.getElementById("wish").value;
 
-        console.log(name, wish, attendanceValue, guestCount);
+        // console.log(name, wish, attendanceValue, guestCount);
 
         if (!attendanceValue || !name || !wish) {
           alert("Please complete the form");
@@ -1025,6 +1025,7 @@ END:VCALENDAR
     </script>
     <script>
       function copyText(button, text) {
+        
         navigator.clipboard.writeText(text);
 
         let icon = button.querySelector("i");

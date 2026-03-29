@@ -1026,7 +1026,7 @@ textarea {
 ========================= */
 .s7 {
   position: relative;
-  z-index: -1;
+  /* z-index: -1; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1037,7 +1037,7 @@ textarea {
   min-height: 100vh;
   overflow: hidden;
 }
-
+/* 
 /* BACKGROUND FIXED FAKE */
 .s7::before {
   content: "";
@@ -1052,16 +1052,21 @@ textarea {
   background-repeat: no-repeat;
   background-size: cover;
 
-  z-index: -2;
+  z-index: -1;
 
   opacity: 0;
   transition: opacity 0.5s ease;
 }
 
+.s7 > * {
+  position: relative; /* semua konten di atas background */
+  z-index: 1;
+}
+
 /* AKTIF SAAT SECTION MASUK */
 .s7.active::before {
   opacity: 1;
-}
+} */
 
 .s7 h1 {
   font-size: 56px;
