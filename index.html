@@ -654,6 +654,25 @@
       </div>
     </div>
     <script>
+      //section 7 fixed bg
+      const section7 = document.querySelector(".s7");
+
+      const observerss = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              section7.classList.add("active");
+            } else {
+              section7.classList.remove("active");
+            }
+          });
+        },
+        {
+          threshold: 0.1, // muncul saat 30% section terlihat
+        },
+      );
+
+      observerss.observe(section7);
       //MUSIC
       const music = document.getElementById("bgMusic");
       music.volume = 0.4;
