@@ -953,7 +953,7 @@ END:VCALENDAR
           wish: wish,
           attendance: attendanceValue,
           guests: guestCount,
-          timestamp: Date.now(),
+          timestamp: firebase.firestore.FieldValue.serverTimestamp(),
         });
 
         alert("Wish submitted!");
@@ -971,16 +971,13 @@ END:VCALENDAR
         });
       }
       function formatDate(timestamp) {
-        if (!timestamp) return "";
+        if (!timestamp) return "Just now"; // atau ""
 
         let date;
 
-        // kalau Firestore Timestamp
         if (typeof timestamp === "object" && timestamp.toDate) {
           date = timestamp.toDate();
-        }
-        // kalau number (millisecond)
-        else {
+        } else {
           date = new Date(timestamp);
         }
 
@@ -1025,7 +1022,6 @@ END:VCALENDAR
     </script>
     <script>
       function copyText(button, text) {
-        
         navigator.clipboard.writeText(text);
 
         let icon = button.querySelector("i");
