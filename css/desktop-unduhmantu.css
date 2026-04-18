@@ -1,0 +1,1851 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* LOADING COVER */
+
+#loadingCover {
+  position: fixed;
+  inset: 0;
+
+  z-index: 1000;
+
+  background: #000;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: opacity 1s ease;
+}
+
+.loading-content {
+  text-align: center;
+
+  color: #fffbea;
+}
+
+.loading-couple {
+  font-family: "Great Vibes", cursive;
+
+  font-size: 60px;
+
+  letter-spacing: 4px;
+
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.loading-couple span {
+  font-size: 40px;
+}
+
+/* loading line animation */
+
+/* loading line animation */
+
+.loading-line {
+  margin: 30px auto;
+
+  width: 160px;
+  height: 2px;
+
+  background: rgba(255, 255, 255, 0.2);
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.loading-line::after {
+  content: "";
+
+  position: absolute;
+
+  left: -40%;
+
+  width: 40%;
+  height: 100%;
+
+  background: #fffbea;
+
+  animation: loadingMove 1.5s infinite;
+}
+
+@keyframes loadingMove {
+  from {
+    left: -40%;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+.loading-text {
+  font-size: 14px;
+
+  letter-spacing: 3px;
+
+  opacity: 0.8;
+}
+
+.loading-credit {
+  margin-top: 20px;
+
+  font-size: 12px;
+
+  letter-spacing: 2px;
+
+  opacity: 0.65;
+
+  color: #fffbea;
+
+  font-style: italic;
+}
+
+/* OPEN INVITATION – FULL DESKTOP */
+#cover {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  transition: transform 1s ease;
+}
+
+.cover-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cover-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.cover-overlay button {
+  margin-top: 20px;
+  padding: 14px 36px;
+  font-size: 18px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+.hide-cover {
+  transform: translateY(-100%);
+}
+
+.cover-couple {
+  /* font-family: "Indie Flower"; */
+  font-family: "Great Vibes";
+
+  font-size: 84px;
+
+  letter-spacing: 4px;
+
+  text-align: center;
+
+  color: #fffbea;
+
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.cover-couple span {
+  font-size: 40px;
+}
+
+.cover-dear {
+  margin-top: 40px;
+
+  font-size: 16px;
+
+  letter-spacing: 2px;
+
+  color: #fffbea;
+}
+
+.cover-guest {
+  margin-top: 6px;
+
+  font-size: 28px;
+
+  font-weight: 500;
+
+  color: #fffbea;
+
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* LAYOUT SETELAH OPEN */
+#layout {
+  display: flex;
+  height: 100vh;
+}
+
+/* LEFT BACKGROUND */
+#left-bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: calc(100% - 480px);
+  height: 100vh;
+}
+
+#left-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* RIGHT CONTENT */
+#main {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 480px;
+  height: 100vh;
+  overflow-y: auto;
+  background: #000;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+/* LEFT BG OVERLAY */
+
+.left-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  /* background: rgba(0, 0, 0, 0.45); */
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  text-align: center;
+
+  color: #fffbea;
+}
+.photo-section {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.section-2 {
+  background-image: url("../assets/section2.webp");
+}
+.section-3 {
+  background-image: url("../assets/section3.webp");
+}
+/* TEXT CENTER */
+.center-text {
+  text-align: center;
+  max-width: 80%;
+}
+
+/* FIXED BACKGROUND SECTION */
+.fixed-bg {
+  background-attachment: fixed;
+}
+
+/* EFFECTS */
+/* .typewriter span {
+  border-right: 2px solid #fff;
+  padding-right: 6px;
+} */
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 5s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: none;
+}
+
+/* GIFT BOX */
+
+.gift-box {
+  background: rgba(0, 0, 0, 0.6);
+
+  padding: 24px;
+
+  border-radius: 16px;
+
+  width: 90%;
+  max-width: 340px;
+
+  margin-top: 20px;
+}
+
+/* ROW */
+
+.gift-row {
+  margin-bottom: 18px;
+}
+
+/* BANK */
+
+.bank {
+  color: #fffbea;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/* NAME */
+
+.name {
+  color: #fffbea;
+  opacity: 0.9;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+/* REKENING */
+
+.rekening {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+  color: #fffbea;
+
+  gap: 5px;
+  /* 
+   justify-content: space-between;
+  color: #fffbea;
+
+  gap: 10px; */
+}
+
+/* NOMOR REKENING */
+
+.rekening span {
+  color: #fffbea;
+  font-size: 15px;
+  letter-spacing: 1px;
+
+  /* 🛑 Prevent Safari from auto-linking */
+  -webkit-touch-callout: none; /* iOS */
+  -webkit-user-select: text;
+  -webkit-text-decoration: none; /* remove link style */
+  text-decoration: none;
+  color: inherit; /* pastikan tetap warna normal */
+}
+/* COPY BUTTON */
+/* COPY BUTTON */
+
+.copy-btn {
+  border: none;
+
+  background: rgba(255, 255, 255, 0.15);
+
+  color: #fffbea;
+
+  width: 34px;
+  height: 34px;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 16px;
+
+  transition: all 0.25s ease;
+}
+
+/* HOVER */
+
+.copy-btn:hover {
+  background: rgba(255, 255, 255, 0.35);
+
+  transform: scale(1.05);
+}
+
+/* COPIED STATE */
+
+.copy-btn.copied {
+  background: #fffbea;
+
+  color: black;
+
+  transform: scale(1.08);
+}
+
+/* GALLERY */
+.gallery-strip {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+}
+
+.photo-section {
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* SECTION BACKGROUNDS */
+.s2 {
+  background-image: url("../assets/section2.webp");
+  color: #fffbea;
+}
+.s3 {
+  background-image: url("../assets/section3.webp");
+}
+.s32 {
+  background-image: url("../assets/section32.webp");
+}
+.s4 {
+  background-image: url("../assets/section4.webp");
+}
+.s5 {
+  background-image: url("../assets/section5.webp");
+}
+.s6 {
+  background-image: url("../assets/section6.webp");
+}
+.s7 {
+  background-image: url("../assets/section7.webp");
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-size: 550px;
+  left: 10px;
+}
+.s8 {
+  background-image: url("../assets/section8.webp");
+}
+.s9 {
+  background-image: url("../assets/section9.webp");
+}
+.s10 {
+  background-image: url("../assets/section10.webp");
+}
+.typewriter {
+  font-family: "Great Vibes", cursive;
+  color: #fffbea;
+  font-size: clamp(20px, 6vw, 40px);
+
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+/* 
+.typewriter span {
+  border-right: 2px solid rgba(255, 255, 255, 0.8);
+  padding-right: 6px;
+  animation: blink 1s infinite;
+} */
+/* 
+@keyframes blink {
+  0%,
+  50%,
+  100% {
+    border-color: rgba(255, 255, 255, 0.8);
+  }
+  25%,
+  75% {
+    border-color: transparent;
+  }
+} */
+/* SECTION 1 CUSTOM POSITION */
+
+/* SECTION 1 CUSTOM POSITION */
+.section-1-custom {
+  position: relative;
+  overflow: hidden;
+}
+
+/* semua layer background */
+.section-1-custom::before,
+.section-1-custom::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  opacity: 0;
+  animation: smoothFade 20s infinite;
+}
+
+/* IMAGE 1 */
+.section-1-custom::before {
+  background-image: url("../assets/section1-1.webp");
+  animation-delay: 0s;
+}
+
+/* IMAGE 2 */
+.section-1-custom::after {
+  background-image: url("../assets/section1-2.webp");
+  animation-delay: 5s;
+}
+
+.bg-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  opacity: 0;
+  animation: smoothFade 20s infinite;
+}
+
+/* IMAGE 3 */
+.bg1 {
+  background-image: url("../assets/section1-3.webp");
+  animation-delay: 10s;
+}
+
+/* IMAGE 4 */
+.bg2 {
+  background-image: url("../assets/section1-4.webp");
+  animation-delay: 15s;
+}
+
+@keyframes smoothFade {
+  0% {
+    opacity: 0;
+  }
+
+  5% {
+    opacity: 1;
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  30% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.section-1-custom h1,
+.section-1-custom h2 {
+  z-index: 2;
+}
+
+.section-1-custom::after {
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.25);
+}
+
+/* LEFT BOTTOM TEXT */
+.text-left-bottom {
+  position: absolute;
+  left: 5%;
+  bottom: 25%;
+  font-size: 3vw;
+  transform: rotate(-15deg);
+  transform-origin: left bottom;
+  text-align: left;
+}
+/* LEFT BOTTOM TEXT */
+.text-left-bottom2 {
+  position: absolute;
+  left: 10%;
+  bottom: 20%;
+  transform: rotate(-15deg);
+  transform-origin: left bottom;
+  text-align: left;
+  font-size: 3vw;
+}
+
+/* RIGHT BOTTOM TEXT */
+
+.text-right-bottom {
+  position: absolute;
+  right: 5%;
+  bottom: 15%;
+  font-size: clamp(60px, 12vw, 60px);
+  transform: rotate(10deg);
+}
+
+.s1 h2 {
+  font-family: "Indie Flower"; /* biar kontras sama judul */
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  font-size: clamp(24px, 8vw, 30px);
+}
+
+/* SECTION 2*/
+/* for font inside section 2 */
+/* SECTION 2 BACKDROP */
+.section-2-text {
+  font-size: 20px;
+
+  background: rgba(30, 29, 29, 0.515); /* putih bening */
+  padding: 32px 28px;
+  border-radius: 20px;
+  font-family: "Indie Flower"; /* biar kontras sama judul */
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+
+  /* color: #e6e6e6; teks jadi kontras */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* CENTERING */
+.section-2-center-text {
+  text-align: center;
+  max-width: 80%;
+}
+
+.section-2-surah {
+  font-size: 30px;
+  display: block;
+  margin-top: 16px;
+  font-family: "Great Vibes", cursive;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* =========================
+   SECTION 3 – DESKTOP
+========================= */
+
+/* =========================
+   SECTION 3 – MOBILE
+========================= */
+.section-3-custom {
+  position: relative;
+  overflow: hidden;
+}
+
+/* THE BRIDE */
+
+.section-3-custom .bride-title {
+  position: absolute;
+  top: 10%;
+  left: 3%;
+  font-size: clamp(60px, 35vw, 100px);
+  transform: rotate(-15deg);
+  transform-origin: left top;
+}
+.section-3-custom .bride-title2 {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  font-size: clamp(60px, 35vw, 100px);
+  transform: rotate(-15deg);
+  transform-origin: left top;
+}
+
+/* NAME */
+
+.section-3-custom .bride-name {
+  position: absolute;
+  top: 42%;
+  right: 5%;
+  font-size: clamp(10px, 4vw, 20px);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  transform: rotate(10deg);
+  font-family: "Indie Flower";
+  text-align: right;
+}
+
+.section-3-custom .bride-born {
+  position: absolute;
+  top: 44%;
+  right: 5%;
+  font-size: clamp(10px, 4vw, 20px);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  transform: rotate(10deg);
+  font-family: "Indie Flower";
+  text-align: right;
+}
+.section-3-custom .bride-ig {
+  position: absolute;
+  top: 49%;
+  right: 5%;
+  font-size: clamp(10px, 4vw, 20px);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  transform: rotate(10deg);
+  font-family: "Indie Flower";
+  text-align: right;
+}
+
+/* =========================
+   SECTION 3(2) – MOBILE
+========================= */
+.section-32-custom {
+  position: relative;
+  overflow: hidden;
+}
+
+/* THE GROOM */
+
+.section-32-custom .groom-title {
+  position: absolute;
+  top: 7%;
+  right: 7%;
+  font-size: clamp(60px, 35vw, 100px);
+  transform: rotate(15deg);
+  transform-origin: right top;
+}
+.section-32-custom .groom-title2 {
+  position: absolute;
+  top: 17%;
+  right: 7%;
+  font-size: clamp(60px, 35vw, 100px);
+  transform: rotate(15deg);
+  transform-origin: right top;
+}
+
+.section-32-custom .groom-name {
+  position: absolute;
+  top: 40%;
+  left: 5%;
+  font-size: clamp(10px, 4vw, 20px);
+  font-family: "Indie Flower"; /* biar kontras sama judul */
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  transform: rotate(-10deg);
+  transform-origin: left bottom;
+  font-family: "Indie Flower"; /* biar kontras sama judul */
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  text-align: left;
+  transform: rotate(-10deg);
+}
+.section-32-custom .groom-born {
+  position: absolute;
+  top: 43%;
+  left: 5%;
+  font-size: clamp(10px, 4vw, 20px);
+  font-family: "Indie Flower"; /* biar kontras sama judul */
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  transform: rotate(-10deg);
+  transform-origin: left bottom;
+  font-family: "Indie Flower"; /* biar kontras sama judul */
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  text-align: left;
+  transform: rotate(-10deg);
+}
+.section-32-custom .groom-ig {
+  position: absolute;
+  top: 46%;
+  left: 5%;
+  font-size: clamp(10px, 4vw, 20px);
+  font-family: "Indie Flower"; /* biar kontras sama judul */
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  transform: rotate(-10deg);
+  transform-origin: left bottom;
+  font-family: "Indie Flower"; /* biar kontras sama judul */
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  text-align: left;
+  transform: rotate(-10deg);
+}
+
+/* =========================
+   SECTION 4 – MOBILE
+========================= */
+.section-4-custom {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-4-custom .groom-parent-s4 {
+  position: absolute;
+  top: 22%;
+  right: 10%;
+  font-size: clamp(28px, 3.1vw, 40px);
+  transform: rotate(10deg);
+  transform-origin: right top;
+  text-align: center;
+}
+.section-4-custom .groom-parent-s4-2 {
+  position: absolute;
+  top: 30%;
+  right: 4%;
+  font-family: "Indie Flower";
+  font-size: clamp(16px, 1.7vw, 20px);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  transform: rotate(10deg);
+  transform-origin: right top;
+  text-align: center;
+}
+.section-4-custom .groom-parent-s4-3 {
+  position: absolute;
+  top: 33%;
+  right: 5%;
+  font-family: "Indie Flower";
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  font-size: clamp(16px, 1.7vw, 20px);
+  transform: rotate(10deg);
+  transform-origin: right top;
+  text-align: center;
+}
+
+.section-4-custom .bride-parent-s4 {
+  position: absolute;
+  top: 32%;
+  left: 3%;
+  font-size: clamp(28px, 3.1vw, 40px);
+  transform: rotate(-10deg);
+  transform-origin: left top;
+  text-align: center;
+}
+.section-4-custom .bride-parent-s4-2 {
+  position: absolute;
+  top: 38%;
+  left: 9%;
+  font-family: "Indie Flower"; /* biar kontras sama judul */
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  font-size: clamp(16px, 1.7vw, 20px);
+  transform: rotate(-10deg);
+  transform-origin: left top;
+  text-align: center;
+}
+.section-4-custom .bride-parent-s4-3 {
+  position: absolute;
+  top: 41%;
+  left: 7%;
+  font-family: "Indie Flower"; /* biar kontras sama judul */
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  font-size: clamp(16px, 1.7vw, 20px);
+  transform: rotate(-10deg);
+  transform-origin: left top;
+  text-align: center;
+}
+
+/* =========================
+   SECTION 5 – MOBILE
+========================= */
+.section-5-custom {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-5-custom .title-s5 {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+
+  font-size: clamp(20px, 10vw, 45px);
+  transform: rotate(-10deg);
+  transform-origin: left top;
+
+  text-align: center;
+  max-width: 100%;
+}
+.section-5-custom .title-s5-2 {
+  position: absolute;
+  top: 17%;
+  left: 7%;
+
+  font-size: clamp(40px, 18vw, 90px);
+  transform: rotate(-10deg);
+  transform-origin: left top;
+
+  text-align: center;
+  max-width: 100%; /* jangan sampai melebihi parent */
+}
+.section-5-custom .title-s5-3 {
+  position: absolute;
+  top: 20%;
+  right: 20%;
+
+  font-size: clamp(30px, 15vw, 45px);
+
+  transform: rotate(-10deg);
+  transform-origin: right top;
+
+  text-align: center;
+  max-width: 100%;
+}
+.section-5-custom .subtitle-s5 {
+  position: absolute;
+  bottom: 19%;
+  left: 10%;
+
+  font-size: clamp(25px, 15vw, 25px);
+
+  transform: rotate(-10deg);
+  transform-origin: left bottom;
+  font-family: "Indie Flower"; /* biar kontras sama judul */
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  max-width: 100%;
+}
+.section-5-custom .subtitle-s5-1 {
+  position: absolute;
+  bottom: 14%;
+  left: 10%;
+
+  font-size: clamp(25px, 15vw, 25px);
+
+  transform: rotate(-10deg);
+  transform-origin: left bottom;
+  font-family: "Indie Flower"; /* biar kontras sama judul */
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  max-width: 100%;
+}
+.section-5-custom .subtitle-s5-2 {
+  position: absolute;
+  bottom: 14%;
+  right: 10%;
+  font-family: "Indie Flower"; /* biar kontras sama judul */
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  font-size: clamp(20px, 15vw, 30px);
+  color: #fffbea;
+  transform: rotate(-10deg);
+  transform-origin: right bottom;
+
+  text-align: center;
+  max-width: 80%;
+}
+
+/* Countdown & Button */
+#countdown {
+  font-family: "Indie Flower";
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  font-size: clamp(25px, 15vw, 40px);
+  position: absolute;
+  bottom: 16%;
+  right: 10%;
+  transform: rotate(-10deg);
+  transform-origin: right bottom;
+  text-align: center;
+  max-width: 80%;
+}
+
+.add-calendar-btn {
+  position: absolute;
+  bottom: 7%;
+  right: 15%;
+  padding: 10px 22px;
+  font-size: clamp(12px, 3vw, 16px);
+  border-radius: 25px;
+  border: none;
+  background-color: #fffbea;
+  color: #000;
+  cursor: pointer;
+  font-family: sans-serif;
+  transform: rotate(-10deg);
+  text-align: center;
+  transition: 0.3s;
+}
+
+.add-calendar-btn:hover {
+  background-color: #f0e6c8;
+}
+
+/* =========================
+   SECTION 6 – MOBILE
+========================= */
+.section-6-custom {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-6-custom .title-s6 {
+  position: absolute;
+  top: 15%;
+  left: 38%;
+
+  font-size: clamp(16px, 1.7vw, 25px);
+  transform: rotate(-10deg);
+  transform-origin: left top;
+
+  font-family: "Indie Flower"; /* biar kontras sama judul */
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  max-width: 100%;
+}
+.section-6-custom .title-s6-2 {
+  position: absolute;
+  top: 23%;
+  left: 7%;
+
+  font-size: clamp(20px, 5.6vw, 50px);
+  transform: rotate(-10deg);
+  transform-origin: left top;
+
+  text-align: center;
+  max-width: 100%;
+}
+.section-6-custom .title-s6-3 {
+  position: absolute;
+  top: 29%;
+  left: 17%;
+  font-family: "Indie Flower";
+  font-size: clamp(20px, 5.6vw, 32px);
+  transform: rotate(-10deg);
+  transform-origin: left top;
+
+  text-align: center;
+  max-width: 100%;
+}
+.section-6-custom .title-s6-4 {
+  position: absolute;
+  top: 33%;
+  left: 35%;
+
+  font-size: clamp(25px, 2.4vw, 20px);
+  transform: rotate(-10deg);
+  transform-origin: left top;
+  font-family: "Indie Flower"; /* biar kontras sama judul */
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  max-width: 100%;
+}
+
+/* Style tombol */
+.btn-hover {
+  background-color: #fffbea; /* Warna awal */
+  color: rgb(31, 31, 31);
+  padding: 12px 28px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Animasi halus */
+  margin-top: 100%;
+}
+
+/* Efek hover */
+.btn-hover:hover {
+  background-color: #efde91; /* Warna saat hover */
+  transform: scale(1.05); /* Membesar sedikit */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Bayangan */
+}
+/* =========================
+   SECTION 7 – WEDDING GIFT
+========================= */
+
+.s7 {
+  display: flex;
+  flex-direction: column; /* bikin berbaris ke bawah */
+  justify-content: center; /* tengah vertikal */
+  align-items: center; /* tengah horizontal */
+  text-align: center;
+  gap: 24px; /* jarak antar elemen */
+  padding: 40px 20px;
+}
+
+.s7 h1 {
+  font-size: 56px;
+  margin-bottom: 10px;
+}
+
+.indie-flower-regular {
+  font-family: "Indie Flower", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.s7 p {
+  font-size: 26px;
+  max-width: 320px;
+  line-height: 1.6;
+  color: #fffbea;
+  font-family: "Indie Flower"; /* biar kontras sama judul */
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.s7 .gift-box {
+  margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+  .s7 h1 {
+    font-size: 64px;
+  }
+
+  .s7 p {
+    font-size: 18px;
+    max-width: 360px;
+  }
+}
+
+.s8 {
+  display: flex;
+  flex-direction: column; /* bikin berbaris ke bawah */
+  justify-content: center; /* tengah vertikal */
+  align-items: center; /* tengah horizontal */
+  text-align: center;
+  gap: 24px; /* jarak antar elemen */
+  padding: 40px 20px;
+}
+
+.s8 h1 {
+  font-size: 45px;
+}
+
+.s8 p {
+  font-family: "Indie Flower"; /* biar kontras sama judul */
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  font-size: clamp(12px, 6vw, 20px);
+
+  color: #fffbea;
+}
+.btn-hover-s8 {
+  background-color: #fffbea; /* Warna awal */
+  color: rgb(31, 31, 31);
+  padding: 12px 28px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Animasi halus */
+  margin-top: 20px;
+}
+
+/* =========================
+   SECTION 9 – DESKTOP
+========================= */
+
+.section-9-custom {
+  position: relative;
+  overflow: hidden;
+}
+/* Thank you title */
+.section-9-custom .thankyou-title {
+  position: absolute;
+  top: 60px;
+  left: 0px;
+  font-size: 100px;
+  transform: rotate(-20deg);
+  transform-origin: left top;
+}
+.section-9-custom .thankyou-title2 {
+  position: absolute;
+  top: 130px;
+  left: 30px;
+  font-size: 100px;
+  transform: rotate(-20deg);
+  transform-origin: left top;
+}
+
+.section-9-custom .thankyou-title3 {
+  font-family: "Indie Flower"; /* biar kontras sama judul */
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+  font-size: clamp(12px, 6vw, 20px);
+  position: absolute;
+  bottom: 13%;
+  right: 7%;
+  transform: rotate(-8deg);
+  transform-origin: right bottom;
+}
+
+/* GALLERY SECTION BACKGROUND */
+
+.gallery-section {
+  min-height: 100dvh; /* ✅ minimal 1 layar */
+  background-attachment: scroll; /* aman untuk mobile */
+
+  background: url("../assets/section-gallery.webp") center/cover no-repeat;
+
+  display: flex;
+  align-items: flex-start; /* top align supaya konten dari atas */
+  justify-content: center;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+
+  padding: 20px 0; /* biar ada nafas */
+}
+
+/* OVERLAY */
+.gallery-overlay {
+  width: min(92%, 1100px);
+
+  background: rgba(0, 0, 0, 0.5);
+
+  border-radius: 16px;
+  padding: 10px;
+
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* supaya konten bisa meluas ke bawah */
+
+  /* ❌ HAPUS height */
+}
+
+/* TILE GRID */
+
+.gallery-tiles {
+  width: 90%;
+  height: 90%;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 140px;
+
+  gap: 10px;
+}
+
+/* FOTO */
+
+.gallery-tiles img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  cursor: pointer;
+
+  border-radius: 10px;
+
+  transition: 0.4s;
+}
+
+.gallery-tiles img:hover {
+  transform: scale(1.05);
+}
+
+/* TILE SIZE */
+
+.tile-big {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.tile-vertical {
+  grid-row: span 2;
+}
+
+.tile-horizontal {
+  grid-column: span 2;
+}
+
+/* GALLERY SECTION 2 */
+
+.gallery-section-2 {
+  background-image: url("../assets/section-gallery2.webp");
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  align-items: flex-start; /* top align supaya konten dari atas */
+  justify-content: center;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+/* OVERLAY */
+.gallery-section-2 .gallery-overlay {
+  width: min(92%, 1100px);
+
+  background: rgba(0, 0, 0, 0.5);
+
+  border-radius: 16px;
+  padding: 12px;
+  margin: 10px;
+
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* supaya konten bisa meluas ke bawah */
+}
+
+/* GRID */
+/* GALLERY 2 GRID */
+/* GALLERY 2 GRID */
+
+.gallery-tiles-2 {
+  width: 90%;
+  height: 90%;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  grid-auto-rows: 140px;
+
+  grid-auto-flow: dense;
+
+  gap: 8px;
+}
+
+/* FOTO */
+
+.gallery-tiles-2 img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  transition: 0.35s;
+}
+
+.gallery-tiles-2 img:hover {
+  transform: scale(1.04);
+}
+
+/* TILE VARIASI */
+
+.g2-big {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.g2-vertical {
+  grid-row: span 2;
+}
+
+.g2-horizontal {
+  grid-column: span 2;
+}
+.g2-added {
+  grid-column: span 2;
+}
+/* MODAL */
+.gallery-modal {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.8);
+
+  display: none;
+
+  justify-content: center;
+  align-items: center;
+
+  z-index: 9999;
+}
+
+.gallery-modal img {
+  max-width: 90%;
+  max-height: 90%;
+
+  object-fit: contain;
+}
+
+/* STORY SECTIONS */
+
+.story-section,
+.engagement-section {
+  min-height: 100vh;
+
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px 20px;
+
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+/* BACKGROUND IMAGE */
+
+.story-section {
+  background-image: url("../assets/story-section.webp");
+}
+
+.engagement-section {
+  background-image: url("../assets/engagement-section.webp");
+}
+
+/* TRANSPARENT BOX */
+
+.story-box {
+  max-width: 700px;
+
+  background: rgba(0, 0, 0, 0.273);
+
+  padding: 40px;
+
+  border-radius: 18px;
+
+  /* backdrop-filter: blur(6px); */
+}
+
+/* TITLE */
+
+.story-box h1 {
+  color: #fffbea;
+
+  font-size: 42px;
+
+  margin-bottom: 10px;
+
+  font-family: "Indie Flower"; /* biar kontras sama judul */
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* SUBTITLE */
+
+.story-box h2 {
+  color: #fffbea;
+
+  font-size: 22px;
+
+  margin-bottom: 25px;
+
+  opacity: 0.85;
+
+  font-family: "Indie Flower"; /* biar kontras sama judul */
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* TEXT */
+
+.story-box p {
+  color: #fffbea;
+
+  line-height: 1.8;
+
+  margin-bottom: 16px;
+
+  font-size: 16px;
+
+  font-family: "Indie Flower"; /* biar kontras sama judul */
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .story-box {
+    padding: 25px;
+  }
+
+  .story-box h1 {
+    font-size: 32px;
+  }
+
+  .story-box h2 {
+    font-size: 18px;
+  }
+
+  .story-box p {
+    font-size: 15px;
+  }
+}
+
+/* ========================= */
+/* SECTION SEND WISH */
+/* ========================= */
+
+.s8 {
+  height: 100dvh;
+
+  background-image: url("../assets/section8.webp");
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px 20px;
+}
+
+/* SUBTITLE */
+
+.wish-sub {
+  font-size: 14px;
+
+  padding: 0 10px;
+
+  margin-bottom: 24px;
+  color: #fffbea;
+
+  text-align: center;
+}
+
+/* FORM BOX */
+
+.wish-box {
+  width: 90%;
+  max-width: 480px;
+  width: 100%;
+  gap: 12px;
+}
+
+/* INPUT */
+
+input,
+textarea {
+  width: 100%;
+  opacity: 0.7;
+  padding: 14px;
+  margin: 5px;
+  border-radius: 20px;
+  border: none;
+  margin-top: 10px;
+}
+/* ATTENDANCE BUTTONS */
+
+.attendance {
+  display: flex;
+  gap: 10px;
+}
+
+.attend-btn {
+  flex: 1;
+
+  padding: 12px;
+
+  border-radius: 20px;
+
+  border: 1px solid #fffbea;
+
+  background: transparent;
+
+  color: #fffbea;
+
+  cursor: pointer;
+
+  transition: 0.25s;
+}
+.wish-submit {
+  flex: 1;
+
+  padding: 12px;
+
+  border-radius: 20px;
+
+  border: 1px solid #fffbea;
+
+  background: #fffbea;
+  color: black;
+
+  cursor: pointer;
+
+  transition: 0.25s;
+}
+
+.wish-submit:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+.attend-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* ACTIVE ATTENDANCE */
+
+.attend-btn.active {
+  background: #fffbea;
+  color: black;
+}
+
+/* GUEST COUNTER */
+
+.guest-counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 18px;
+
+  color: #fffbea;
+
+  font-size: 18px;
+}
+
+.guest-counter button {
+  width: 34px;
+  height: 34px;
+
+  border-radius: 50%;
+
+  border: 1px solid #fffbea;
+
+  background: #fffbea;
+
+  color: black;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  font-size: 18px;
+}
+
+/* SUBMIT BUTTON */
+/* 
+.wish-box button:last-child {
+  margin-top: 10px;
+
+  padding: 14px;
+
+  border-radius: 22px;
+
+  border: none;
+
+  background: #fffbea;
+
+  color: black;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+} */
+
+/* .wish-box button:last-child:hover {
+  transform: scale(1.04);
+} */
+/* ========================= */
+/* WISHLIST – NEW STYLE */
+/* ========================= */
+
+.wishlist-section {
+  min-height: 100dvh;
+  background: url("../assets/section-wishlist.webp") center/cover no-repeat;
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  scroll-snap-align: start;
+}
+
+/* DARK OVERLAY */
+
+.wishlist-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+}
+
+/* CONTENT WRAPPER */
+
+.wishlist-overlay {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  height: 100dvh;
+
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* TITLE */
+
+.wishlist-overlay h1 {
+  color: #fffbea;
+  text-align: center;
+
+  font-size: clamp(20px, 6vw, 36px);
+  margin-bottom: 20px;
+
+  font-family: "Indie Flower";
+}
+
+/* STREAM CONTAINER */
+
+.wish-stream {
+  flex: 1;
+  overflow-y: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  padding: 10px 5px 40px;
+}
+
+/* EACH ROW */
+
+.wish-row {
+  display: flex;
+  width: 100%;
+}
+
+/* LEFT ALIGN */
+
+.wish-row.left {
+  justify-content: flex-start;
+}
+
+/* RIGHT ALIGN */
+
+.wish-row.right {
+  justify-content: flex-end;
+}
+
+/* LEFT ALIGN */
+.wish-row.left .wish-content {
+  text-align: left; /* teks rata kiri */
+  align-items: flex-start; /* anak flex ikut kiri */
+  margin-left: 0;
+  margin-right: auto;
+}
+
+/* RIGHT ALIGN */
+.wish-row.right .wish-content {
+  text-align: right; /* teks rata kanan */
+  align-items: flex-end; /* anak flex ikut kanan */
+  margin-left: auto;
+  margin-right: 0;
+}
+
+/* CONTENT (NO BOX, JUST TEXT) */
+
+.wish-content {
+  max-width: 75%;
+
+  color: #fffbea;
+
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  font-family: sans-serif;
+
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* NAME */
+
+.wish-content b {
+  font-size: clamp(14px, 4vw, 18px);
+}
+
+/* TIME */
+
+.wish-time {
+  font-size: clamp(9px, 2vw, 10px);
+  opacity: 0.7;
+}
+
+/* MESSAGE */
+
+.wish-content p {
+  font-size: clamp(13px, 3.5vw, 16px);
+  line-height: 1.6;
+}
+
+/* SCROLLBAR */
+
+.wish-stream::-webkit-scrollbar {
+  width: 4px;
+}
+
+.wish-stream::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+}
+/* ========================= */
+/* VIDEO SECTION */
+/* ========================= */
+
+.video-section {
+  height: 100vh;
+  position: relative;
+  background-image: url("../assets/section-video.webp");
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+/* OVERLAY */
+
+.video-overlay {
+  width: 100%;
+  max-width: 900px;
+  margin-bottom: 100%;
+  font-family: "Indie Flower"; /* biar kontras sama judul */
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  /* background: rgba(0, 0, 0, 0.35);
+
+  padding: 40px;
+
+  border-radius: 20px; */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* TITLE */
+
+.video-overlay h1 {
+  color: #fffbea;
+
+  margin-bottom: 24px;
+
+  font-size: 24px;
+
+  text-align: center;
+}
+
+/* VIDEO WRAPPER */
+
+.video-wrapper {
+  width: 100%;
+
+  position: relative;
+
+  padding-bottom: 56.25%; /* 16:9 */
+}
+
+.video-wrapper iframe {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  border: none;
+
+  border-radius: 12px;
+}
+
+.video-section .our-wedding-title {
+  position: absolute;
+  bottom: 5%;
+  left: 17%;
+
+  font-size: clamp(60px, 19vw, 80px);
+  transform: rotate(-5deg);
+  transform-origin: left bottom;
+}
