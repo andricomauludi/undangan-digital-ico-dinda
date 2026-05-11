@@ -402,7 +402,7 @@ textarea {
 
 /* SECTION BACKGROUNDS */
 .s2 {
-  background-image: url("../assets/section2.webp");
+  background-image: url("../assets/section-gallery.webp");
   color: #fffbea;
 }
 .s3 {
@@ -1413,7 +1413,7 @@ font-family: "Indie Flower";
 /* BACKGROUND IMAGE */
 
 .story-section2 {
-  background-image: url("../assets/section-gallery.webp");
+  background-image: url("../assets/section2.webp");
 }
 
 .story-section {

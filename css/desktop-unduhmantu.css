@@ -423,7 +423,7 @@ body {
 
 /* SECTION BACKGROUNDS */
 .s2 {
-  background-image: url("../assets/section2.webp");
+  background-image: url("../assets/section-gallery.webp");
   color: #fffbea;
 }
 .s3 {
@@ -1394,7 +1394,7 @@ body {
   background-image: url("../assets/story-section.webp");
 }
 .story-section2 {
-  background-image: url("../assets/section-gallery.webp");
+  background-image: url("../assets/section2.webp");
 }
 
 .engagement-section {
