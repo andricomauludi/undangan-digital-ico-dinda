@@ -12,8 +12,16 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="css/mobile-unduhmantu.css" media="(max-width: 768px)" />
-    <link rel="stylesheet" href="css/desktop-unduhmantu.css" media="(min-width: 769px)" />
+    <link
+      rel="stylesheet"
+      href="css/mobile-unduhmantu.css"
+      media="(max-width: 768px)"
+    />
+    <link
+      rel="stylesheet"
+      href="css/desktop-unduhmantu.css"
+      media="(min-width: 769px)"
+    />
     <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
     <meta name="format-detection" content="telephone=no" />
@@ -73,7 +81,7 @@
 
       <div class="cover-overlay">
         <h1 class="cover-couple">
-          Unduh Mantu <br />
+          Ngunduh Mantu <br />
           Dinda <br />
           <span>&</span> <br />
           Andrico
@@ -95,7 +103,7 @@
 
         <div class="left-overlay">
           <h1 class="cover-couple">
-            Unduh Mantu <br />
+            Ngunduh Mantu <br />
             Dinda <br />
             <span>&</span> <br />
             Andrico
@@ -265,12 +273,28 @@
             <span></span>
           </h1>
         </section>
+        <!-- OUR STORY -->
+        <section class="story-section2">
+          <div class="fade-in story-box" style=" background: rgba(0, 0, 0, 0.9);">
+            <h1>We are getting Married!</h1>
+            <h2>In Surabaya, on 6th of June 2026</h2>
+
+            <h2>
+              We officially began our forever on June 6th, 2026, in Surabaya — if you
+              are receiving this invitation, it means you are truly special to
+              us!
+            </h2>
+            <h2>
+             We are delighted to invite you to our Ngunduh Mantu celebration at our beloved home. The date and details of the celebration can be found on the next page — and we cannot wait to celebrate together with you!
+            </h2>
+          </div>
+        </section>
         <!-- SECTION 5 -->
         <section class="photo-section s5 section-5-custom">
           <h1
             class="typewriter title-s5"
             data-text="
-    Unduh Mantu :"
+    Ngunduh Mantu :"
           >
             <span></span>
           </h1>
@@ -327,9 +351,7 @@
           <div>
             <button
               class="btn-hover fade-in"
-              onclick="
-                window.open('https://maps.app.goo.gl/bEVcDW1bQhQvv3s1A')
-              "
+              onclick="window.open('https://maps.app.goo.gl/bEVcDW1bQhQvv3s1A')"
             >
               View Maps
             </button>
@@ -686,7 +708,7 @@
       //COUNTDOWN
       function updateCountdown() {
         // Tanggal target: 14 Juni 2026 10:00 WIB
-       const target = new Date(Date.UTC(2026, 5, 14, 3, 0, 0));// UTC+0 = WIB-7
+        const target = new Date(Date.UTC(2026, 5, 14, 3, 0, 0)); // UTC+0 = WIB-7
         const now = new Date();
         const diff = target - now;
 

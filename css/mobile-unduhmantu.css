@@ -1393,7 +1393,28 @@ font-family: "Indie Flower";
   scroll-snap-stop: always;
 }
 
+.story-section2,
+.engagement-section {
+  min-height: 100vh;
+
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px 20px;
+
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
 /* BACKGROUND IMAGE */
+
+.story-section2 {
+  background-image: url("../assets/section-gallery.webp");
+}
 
 .story-section {
   background-image: url("../assets/story-section.webp");
